@@ -1,0 +1,21 @@
+package model.element.motionless;
+
+/**
+ * <h1>The class Mud can be dig and don't move</h1>
+ *
+ * @author Ghislain Gloria
+ * @version 1.0
+ */
+
+public class Mud extends Motionless{
+
+	/**
+     * Destroy the Mud when RockFord is in the same position.
+     */
+	/*
+     * @see model.element.mobile.character.RockFord#digMud(Mud)
+     */
+	public void beDig(){
+		
+	}
+}

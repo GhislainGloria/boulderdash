@@ -1,0 +1,28 @@
+package model.element.mobile;
+
+/**
+ * <h1>The abstract class Motion define what a motion element is.</h1>
+ *
+ * @author Ghislain Gloria
+ * @version 1.0
+ */
+
+public abstract class Mobile {
+	private int speed;
+	
+	public void moveDown(){
+		
+	}
+	
+	public void moveUp(){
+			
+	}
+	
+	public void moveLeft(){
+		
+	}
+	
+	public void moveRight(){
+		
+	}
+}
