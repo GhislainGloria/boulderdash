@@ -8,6 +8,9 @@ package model.element;
  */
 
 public class Position {
+	/*
+	 * Position Initial, Max and Min 
+	 */
 	private double x;
 	private double y;
 	private double maxX;

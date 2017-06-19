@@ -8,7 +8,10 @@ package model.element.motionless;
  */
 
 public class Mud extends Motionless{
-
+	/*Create a bloc of mud**/
+	public Mud(){
+		
+	}
 	/**
      * Destroy the Mud when RockFord is in the same position.
      */

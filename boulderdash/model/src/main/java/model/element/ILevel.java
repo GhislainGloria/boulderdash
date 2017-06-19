@@ -7,11 +7,13 @@ import model.element.motionless.Motionless;
 
 public interface ILevel {
 
-		public double dimensionX = 0;
-		public double dimensionY = 0;
-		public Counter counter = null;
-		public ArrayList<Mobile> mobiles = null;
-		public ArrayList<Motionless> motionless = null;
-		
+	/*DimensionX**/
+	public double dimensionX = 0;
+	/*DimensionY**/
+	public double dimensionY = 0;
+	/*List of mobiles elements **/
+	public ArrayList<Mobile> mobiles = null;
+	/*List of motionless elements **/
+	public ArrayList<Motionless> motionless = null;
 }
 

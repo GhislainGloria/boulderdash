@@ -12,17 +12,20 @@ import model.element.mobile.Mobile;
  */
 
 public class Level implements ILevel{
+	
+	/*DimensionX**/
 	public double dimensionX;
+	/*DimensionY**/
 	public double dimensionY;
-	public Counter counter;
+	/*List of mobiles elements **/
 	public ArrayList<Mobile> mobiles;
+	/*List of motionless elements **/
 	public ArrayList<Motionless> motionless;
 	
-
+	/*Create a Level**/
 	public Level(){
 		dimensionX = 0;
 		dimensionY = 0;
-		counter = null;
 		mobiles = null;
 		motionless = null;
 	}
