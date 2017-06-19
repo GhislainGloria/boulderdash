@@ -37,7 +37,6 @@ public class ModelFacade implements IModel {
     }
 
     /*
-
      * @see model.IModel#getAllExamples()
      */
     @Override

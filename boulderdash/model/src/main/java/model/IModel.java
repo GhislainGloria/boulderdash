@@ -8,7 +8,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.List;
 
-import model.dao.BoulderDashBDDConnector;
 import model.dao.ExampleDAO;
 
 public interface IModel {
@@ -16,7 +15,6 @@ public interface IModel {
     /*
      * @see model.IModel#getExampleById(int)
      */
-
     public Example getExampleById(final int id) throws SQLException;
 
     /*
@@ -25,9 +23,8 @@ public interface IModel {
     public Example getExampleByName(final String name) throws SQLException;
 
     /*
-
      * @see model.IModel#getAllExamples()
      */
-
     public List<Example> getAllExamples() throws SQLException;
+    
 }

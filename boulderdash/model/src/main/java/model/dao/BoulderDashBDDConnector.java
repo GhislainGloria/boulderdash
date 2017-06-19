@@ -6,15 +6,13 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import model.IModel;
-
 /**
  * <h1>The Class BoulderDashBDDConnector.</h1>
  *
  * @author Jean-Aymeric DIET jadiet@cesi.fr
  * @version 1.0
  */
-final class BoulderDashBDDConnector{
+final class BoulderDashBDDConnector {
 
     /** The instance. */
     private static BoulderDashBDDConnector instance;
