@@ -61,4 +61,4 @@ public class Level implements ILevel{
 	public void setMotionless(ArrayList<Motionless> motionless) {
 		this.motionless = motionless;
 	}
-}mobl
+}
