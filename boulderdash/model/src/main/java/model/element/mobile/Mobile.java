@@ -8,8 +8,6 @@ package model.element.mobile;
  */
 
 public abstract class Mobile implements IMobile{
-	private int speed;
-	
 	private int ID;
 	
 	/**

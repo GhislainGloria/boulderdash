@@ -10,6 +10,8 @@ import model.element.Position;
  */
 
 public abstract class Motionless {
+	/*The ID of the Motionless Element**/
 	private int ID;
+	/*The Position of the Motionless Element**/
 	private Position position;
 }
