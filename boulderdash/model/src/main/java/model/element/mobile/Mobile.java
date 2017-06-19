@@ -7,7 +7,7 @@ package model.element.mobile;
  * @version 1.0
  */
 
-public abstract class Mobile {
+public abstract class Mobile implements IMobile{
 	private int speed;
 	
 	/**

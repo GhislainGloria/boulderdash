@@ -11,7 +11,7 @@ import model.element.mobile.Mobile;
  * @version 1.0
  */
 
-public class Level {
+public class Level implements ILevel{
 	public double dimensionX;
 	public double dimensionY;
 	public Counter counter;

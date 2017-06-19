@@ -21,7 +21,6 @@ public class ModelFacade implements IModel {
     }
 
     /*
-     * (non-Javadoc)
      * @see model.IModel#getExampleById(int)
      */
     @Override
@@ -30,7 +29,6 @@ public class ModelFacade implements IModel {
     }
 
     /*
-     * (non-Javadoc)
      * @see model.IModel#getExampleByName(java.lang.String)
      */
     @Override
@@ -39,7 +37,7 @@ public class ModelFacade implements IModel {
     }
 
     /*
-     * (non-Javadoc)
+
      * @see model.IModel#getAllExamples()
      */
     @Override

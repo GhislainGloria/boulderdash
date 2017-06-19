@@ -7,6 +7,22 @@ package model.element.mobile.character;
  * @version 1.0
  */
 
-public class Amoeba extends Monster{
+public class Amoeba{
+	
+	public Amoeba(){
+		
+	}
+	
+	public void Multiplication(){
+		
+	}
+	
+	public void TransformToDiamond(){
+		
+	}
+	
+	public void TransformInDiamond(){
+		
+	}
 	
 }
