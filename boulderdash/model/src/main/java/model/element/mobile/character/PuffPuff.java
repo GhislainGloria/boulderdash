@@ -12,4 +12,9 @@ public class PuffPuff extends Monster{
 	public PuffPuff(){
 		
 	}
+	
+	/*The monster turn left when he encounter a object**/
+	public void move(){
+			
+	}
 }

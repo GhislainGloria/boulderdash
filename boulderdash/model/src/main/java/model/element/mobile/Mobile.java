@@ -13,19 +13,4 @@ public abstract class Mobile implements IMobile{
 	/**
      * the Mobile object changing his Position.
      */
-	public void moveDown(){
-		
-	}
-	
-	public void moveUp(){
-			
-	}
-	
-	public void moveLeft(){
-		
-	}
-	
-	public void moveRight(){
-		
-	}
 }

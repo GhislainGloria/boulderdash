@@ -8,8 +8,13 @@ package model.element.mobile.object;
  */
 
 public class Diamond {
-	/* Add +1 in the Diamond Counter **/
-	public void addDiamond(){
+	/*Create an instance of a Diamond**/
+	public Diamond(){
+		
+	}
+	
+	/*Make the Diamond disappeared when RockFord is in the same Position**/
+	public void beTake(){
 		
 	}
 }

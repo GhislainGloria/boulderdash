@@ -18,7 +18,7 @@ public class Level implements ILevel{
 	/*DimensionY**/
 	public double dimensionY;
 	/*List of mobiles elements **/
-	public ArrayList<Mobile> mobiles;
+	public ArrayList<Mobile> mobile;
 	/*List of motionless elements **/
 	public ArrayList<Motionless> motionless;
 	
@@ -26,7 +26,39 @@ public class Level implements ILevel{
 	public Level(){
 		dimensionX = 0;
 		dimensionY = 0;
-		mobiles = null;
+		mobile = null;
 		motionless = null;
 	}
-}
+
+	public double getDimensionX() {
+		return dimensionX;
+	}
+
+	public void setDimensionX(double dimensionX) {
+		this.dimensionX = dimensionX;
+	}
+
+	public double getDimensionY() {
+		return dimensionY;
+	}
+
+	public void setDimensionY(double dimensionY) {
+		this.dimensionY = dimensionY;
+	}
+
+	public ArrayList<Mobile> getMobile() {
+		return mobile;
+	}
+
+	public void setMobile(ArrayList<Mobile> mobile) {
+		this.mobile = mobile;
+	}
+
+	public ArrayList<Motionless> getMotionless() {
+		return motionless;
+	}
+
+	public void setMotionless(ArrayList<Motionless> motionless) {
+		this.motionless = motionless;
+	}
+}mobl

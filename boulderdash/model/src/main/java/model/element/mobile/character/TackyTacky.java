@@ -17,4 +17,9 @@ public class TackyTacky extends Monster{
 	public void die(){
 		
 	}
+	
+	/*The monster turn right when he encounter a object**/
+	public void move(){
+			
+	}
 }

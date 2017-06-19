@@ -10,5 +10,24 @@ import model.element.mobile.Mobile;
  */
 
 public class RockFord extends Mobile{
+	/*Create an instance of Rockford**/
+	public RockFord(){
+		
+	}
+	public void moveDown(){
+		
+	}
+	
+	public void moveUp(){
+			
+	}
+	
+	public void moveLeft(){
+		
+	}
+	
+	public void moveRight(){
+		
+	}
 	
 }

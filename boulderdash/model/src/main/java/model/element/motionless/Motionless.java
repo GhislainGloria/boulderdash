@@ -14,4 +14,17 @@ public abstract class Motionless {
 	private int ID;
 	/*The Position of the Motionless Element**/
 	private Position position;
+	
+	public int getID() {
+		return ID;
+	}
+	public void setID(int iD) {
+		ID = iD;
+	}
+	public Position getPosition() {
+		return position;
+	}
+	public void setPosition(Position position) {
+		this.position = position;
+	}
 }

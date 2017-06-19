@@ -10,6 +10,9 @@ package model.element.mobile.character;
 public class BubbleBubble extends Monster{
 	/*Create a BubbleBubble**/
 	public BubbleBubble(){
-		
+	}
+	/*Move the monster from right to left**/
+	public void move(){
+			
 	}
 }

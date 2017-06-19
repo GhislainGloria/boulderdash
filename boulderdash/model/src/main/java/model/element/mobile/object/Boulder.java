@@ -8,6 +8,7 @@ package model.element.mobile.object;
  */
 
 public class Boulder {
+	
 	/* Destroy the monster at the same position of the boulder**/
 	public void kill(){
 		

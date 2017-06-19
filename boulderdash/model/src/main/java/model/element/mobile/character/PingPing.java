@@ -12,4 +12,9 @@ public class PingPing extends Monster{
 	public PingPing(){
 		
 	}
+	
+	/*Move the monster from up to down**/
+	public void move(){
+			
+	}
 }

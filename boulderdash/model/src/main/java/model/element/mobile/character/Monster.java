@@ -29,4 +29,11 @@ public abstract class Monster extends Mobile {
 	public void kill(){
 		
 	}
+	
+	/**
+	 * Move the monster
+	 */
+	public void move(){
+		
+	}
 }

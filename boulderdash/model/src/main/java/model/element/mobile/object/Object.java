@@ -9,7 +9,7 @@ package model.element.mobile.object;
 
 public abstract class Object {
 	/*Make the object fall if he don't have motionless element under him **/
-	public void fall(){
+	public void Fall(){
 		
 	}
 }
