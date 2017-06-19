@@ -49,36 +49,37 @@ public class ControllerBoulder implements IController, IOrderPerformer {
 	/**
 	 * Start the game.
 	 *
-	 * @throws Exception
+	 * @throws InterruptedException
 	 *
 	 */
 	public void start() throws InterruptedException {
-		while (this.getModel().getMyCharacter().isAlive()) {
+		while (this.getModel().getMap().getCharacter().isAlive()) {
 			Thread.sleep(speed);
 			switch (this.getStackOrder()) {
 			case RIGHT:
-				this.getModel().getMyCharacter().moveRight();
+				this.getModel().getCharacter().moveRight();
 				break;
 			case LEFT:
-				this.getModel().getMyCharacter().moveLeft();
+				this.getModel().getCharacter().moveLeft();
 				break;
 			case UP:
-				this.getModel().getMyCharacter().moveUp();
+				this.getModel().getCharacter().moveUp();
 				break;
 			case DOWN:
-				this.getModel().getMyCharacter().moveDown();
+				this.getModel().getCharacter().moveDown();
 				break;
 			case NOP:
 			default:
-				this.getModel().getMyCharacter().doNothing();
+				this.getModel().getCharacter().doNothing();
 				break;
 			}
 			this.clearStackOrder();
-			if (this.getModel().getMyCharacter().isAlive()) {
-
+			if (this.getModel().getMap().getdiamondscount() == 0) {
+				this.getView().displayMessage("You collected all the diamonds, well done!!");
+				System.exit(0);
 			}
 		}
-		this.getView().displayMessage("Game over! You are dead!");
+		this.getView().displayMessage("You are dead!");
 	}
 
 	/**
