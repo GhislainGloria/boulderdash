@@ -142,7 +142,7 @@ public class ControllerBoulder implements IController, IOrderPerformer {
 	}
 
 	@Override
-	public IOrderPerformer getOrderPeformer(userOrder userOrder) {
+	public IOrderPerformer getOrderPeformer() {
 		return this;
 	}
 }
