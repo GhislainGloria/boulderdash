@@ -1,5 +1,5 @@
 package model.element.mobile;
-
+import model.element.Position;
 /**
  * <h1>The abstract class Motion define what a motion element is.</h1>
  *
@@ -9,6 +9,7 @@ package model.element.mobile;
 
 public abstract class Mobile implements IMobile{
 	private int ID;
+	private Position position;
 	
 	/**
      * the Mobile object changing his Position.
