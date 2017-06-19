@@ -2,10 +2,6 @@ package controller;
 
 import java.sql.SQLException;
 import java.util.List;
-import boulderdash.controller.IOrderPerformer;
-import boulderdash.controller.UserOrder;
-import boulderdash.model.IModel;
-import boulderdash.view.IView;
 import model.Example;
 import model.IModel;
 import view.IView;
@@ -19,10 +15,10 @@ import view.IView;
 public class ControllerBoulder implements IController, IOrderPerformer {
 
 	/** The view. */
-	private final IView view;
+	private IView view;
 
 	/** The model. */
-	private final IModel model;
+	private IModel model;
 
 	/** The speed. */
 	private final int speed = 300;
@@ -146,7 +142,7 @@ public class ControllerBoulder implements IController, IOrderPerformer {
 	}
 
 	@Override
-	public IOrderPerformer getOrderPeformer() {
+	public IOrderPerformer getOrderPeformer(userOrder userOrder) {
 		return this;
 	}
 }
