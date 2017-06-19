@@ -9,8 +9,9 @@ package model.element.mobile;
 
 public abstract class Mobile {
 	private int speed;
+	
 	/**
-     * Destroy the Mobile object changing his Position.
+     * the Mobile object changing his Position.
      */
 	public void moveDown(){
 		
