@@ -4,7 +4,7 @@
 package controller;
 
 /**
- * @author Corentin RAGUENEAU
+ * @author Corentin RAGUENEAU 
  *
  */
 public interface IControllerBoulder 

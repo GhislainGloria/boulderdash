@@ -11,9 +11,9 @@ import view.IView;
  * <h1>The Class ControllerFacade provides a facade of the Controller component.</h1>
  *
  * @author Jean-Aymeric DIET jadiet@cesi.fr
- * @version 1.0
+ * @version 1.0 
  */
-public class ControllerFacade implements IController {
+public class ControllerBoulder implements IController {
 
     /** The view. */
     private final IView  view;
@@ -29,7 +29,7 @@ public class ControllerFacade implements IController {
      * @param model
      *            the model
      */
-    public ControllerFacade(final IView view, final IModel model) {
+    public ControllerBoulder(final IView view, final IModel model) {
         super();
         this.view = view;
         this.model = model;
