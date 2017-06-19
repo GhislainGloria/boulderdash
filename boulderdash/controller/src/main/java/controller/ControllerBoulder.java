@@ -2,11 +2,10 @@ package controller;
 
 import java.sql.SQLException;
 import java.util.List;
-
-import fr.exia.insanevehicles.controller.IOrderPerformer;
-import fr.exia.insanevehicles.controller.UserOrder;
-import fr.exia.insanevehicles.model.IInsaneVehiclesModel;
-import fr.exia.insanevehicles.view.IInsaneVehiclesView;
+import boulderdash.controller.IOrderPerformer;
+import boulderdash.controller.UserOrder;
+import boulderdash.model.IModel;
+import boulderdash.view.IView;
 import model.Example;
 import model.IModel;
 import view.IView;
