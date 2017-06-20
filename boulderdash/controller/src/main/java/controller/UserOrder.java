@@ -5,7 +5,7 @@
  */
 
 
-public enum userOrder 
-{
-	UP, DOWN, LEFT, RIGHT, Z, D, NOP;
+public enum UserOrder {
+/** Different command can be use by the user. */
+UP, DOWN, LEFT, RIGHT, Z, D, NOP;
 }

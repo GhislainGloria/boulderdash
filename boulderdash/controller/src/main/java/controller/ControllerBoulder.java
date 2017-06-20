@@ -28,6 +28,7 @@ public class ControllerBoulder implements IController, IOrderPerform {
 	private userOrder stackOrder;
 	
 	/**
+	 * 
 	 * @return nLevel 
 	 * 				Choose the level
 	 */
@@ -68,7 +69,7 @@ public class ControllerBoulder implements IController, IOrderPerform {
 	 * @throws InterruptedException
 	 *
 	 */
-	/*public void start() throws InterruptedException {
+	public void start() throws InterruptedException {
 		while (this.getModel().getMap().getCharacter().isAlive()) {
 			Thread.sleep(speed);
 			switch (this.getStackOrder()) {
@@ -96,7 +97,7 @@ public class ControllerBoulder implements IController, IOrderPerform {
 			}
 		}
 		this.getView().displayMessage("You are dead!");
-	}*/
+	}
 
 	/**
 	 * Gets the view.

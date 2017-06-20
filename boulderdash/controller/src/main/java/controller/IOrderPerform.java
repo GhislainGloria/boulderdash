@@ -1,14 +1,9 @@
-/**
- *  
- */ 
 package controller;
- 
 /**
  * @author Corentin RAGUENEAU
  *
  */
-public interface IOrderPerform
-{
-	public void orderPerform(userOrder userOrder);
-	
+public interface IOrderPerform {
+/** @return this.getOrderPerform */
+IOrderPerform getOrderPerform();
 }
