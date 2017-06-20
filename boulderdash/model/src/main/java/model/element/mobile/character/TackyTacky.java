@@ -8,17 +8,17 @@ package model.element.mobile.character;
  */
 
 public class TackyTacky extends Monster{
-	/*Create a TackyTacky**/
+	/**Create a TackyTacky*/
 	public TackyTacky(){
 		
 	}
 	
-	/*Transform the monster in diamond if he die**/
+	/**Transform the monster in diamond if he die*/
 	public void die(){
 		
 	}
 	
-	/*The monster turn right when he encounter a object**/
+	/**The monster turn right when he encounter a object*/
 	public void move(){
 			
 	}

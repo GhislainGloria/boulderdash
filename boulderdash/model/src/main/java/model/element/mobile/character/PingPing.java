@@ -8,12 +8,12 @@ package model.element.mobile.character;
  */
 
 public class PingPing extends Monster{
-	/*Create a PingPing**/
+	/**Create a PingPing*/
 	public PingPing(){
 		
 	}
 	
-	/*Move the monster from up to down**/
+	/**Move the monster from up to down*/
 	public void move(){
 			
 	}

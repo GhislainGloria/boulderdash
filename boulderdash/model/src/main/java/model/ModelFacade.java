@@ -20,7 +20,7 @@ public class ModelFacade implements IModel {
         super();
     }
 
-    /*
+    /**
      * @see model.IModel#getExampleById(int)
      */
     @Override
@@ -28,7 +28,7 @@ public class ModelFacade implements IModel {
         return ExampleDAO.getExampleById(id);
     }
 
-    /*
+    /**
      * @see model.IModel#getExampleByName(java.lang.String)
      */
     @Override
@@ -36,7 +36,7 @@ public class ModelFacade implements IModel {
         return ExampleDAO.getExampleByName(name);
     }
 
-    /*
+    /**
      * @see model.IModel#getAllExamples()
      */
     @Override

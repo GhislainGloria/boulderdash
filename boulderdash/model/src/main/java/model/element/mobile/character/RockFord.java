@@ -10,7 +10,7 @@ import model.element.mobile.Mobile;
  */
 
 public class RockFord extends Mobile{
-	/*Create an instance of Rockford**/
+	/**Create an instance of Rockford*/
 	public RockFord(){
 		
 	}

@@ -8,12 +8,12 @@ package model.element.mobile.object;
  */
 
 public class Diamond {
-	/*Create an instance of a Diamond**/
+	/**Create an instance of a Diamond*/
 	public Diamond(){
 		
 	}
 	
-	/*Make the Diamond disappeared when RockFord is in the same Position**/
+	/**Make the Diamond disappeared when RockFord is in the same Position*/
 	public void beTake(){
 		
 	}

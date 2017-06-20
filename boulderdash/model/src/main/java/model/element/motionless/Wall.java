@@ -8,7 +8,7 @@ package model.element.motionless;
  */
 
 public class Wall extends Motionless{
-	/*Create a Wall**/
+	/**Create a Wall*/
 	public Wall(){
 		
 	}

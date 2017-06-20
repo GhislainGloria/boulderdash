@@ -12,22 +12,29 @@ import model.element.mobile.Mobile;
  */
 
 public class Level implements ILevel{
-	
-	/*DimensionX**/
+	/**ID in the Database*/
+	public int ID;
+	/**Path for find the .txt in the computer*/
+	public String Path;
+	/**DimensionX*/
 	public double dimensionX;
-	/*DimensionY**/
+	/**DimensionY*/
 	public double dimensionY;
-	/*List of mobiles elements **/
+	/**List of mobiles elements */
 	public ArrayList<Mobile> mobile;
-	/*List of motionless elements **/
+	/**List of motionless elements */
 	public ArrayList<Motionless> motionless;
 	
-	/*Create a Level**/
+	/**Create a Level*/
 	public Level(){
 		dimensionX = 0;
 		dimensionY = 0;
 		mobile = null;
 		motionless = null;
+	}
+
+	public Level(int ID, String Path) {
+		// TODO Auto-generated constructor stub
 	}
 
 	public double getDimensionX() {

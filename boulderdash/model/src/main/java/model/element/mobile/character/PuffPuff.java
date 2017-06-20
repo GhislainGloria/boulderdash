@@ -8,12 +8,12 @@ package model.element.mobile.character;
  */
 
 public class PuffPuff extends Monster{
-	/* Create a PuffPuff **/
+	/** Create a PuffPuff */
 	public PuffPuff(){
 		
 	}
 	
-	/*The monster turn left when he encounter a object**/
+	/**The monster turn left when he encounter a object*/
 	public void move(){
 			
 	}
