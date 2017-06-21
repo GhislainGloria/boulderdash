@@ -7,6 +7,9 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import model.element.Level;
+import model.element.mobile.character.RockFord;
+
 /**
  * @author gglor
  *
@@ -17,9 +20,14 @@ public class MudTest {
 	 */
 	@Test
 	public void testMud() {
-		Mud mud = new Mud(5, 5);
+		int a = 5;
+		int b = 5;
+		Mud mud = new Mud(a, b);
 		System.out.println(mud.position.getX());
 		System.out.println(mud.position.getY());
+		if ((mud.position.getX() < 0 || mud.position.getX() > Level.getDimensionX())||(mud.position.getY() < 0 || mud.position.getY()  > Level.getDimensionY())){
+			fail("Out of Range");
+		}
 	}
 
 	/**
@@ -28,7 +36,9 @@ public class MudTest {
 	@Test
 	public void testBeDig() {
 		Mud mudTest = new Mud(5 ,5);
-		if (RockFord.position.
+		RockFord rockfordTest = new RockFord();
+		while(mudTest != null){
+			
+		}
 	}
-
 }

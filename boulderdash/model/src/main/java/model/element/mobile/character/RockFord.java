@@ -1,5 +1,7 @@
 package model.element.mobile.character;
 
+import model.element.Direction;
+import model.element.Position;
 import model.element.mobile.Mobile;
 
 /**
@@ -11,22 +13,11 @@ import model.element.mobile.Mobile;
 
 public class RockFord extends Mobile{
 	/**Create an instance of Rockford*/
-	public RockFord(){
-		
-	}
-	public void moveDown(){
+	public RockFord(Direction direction, Position position, String image){
 		
 	}
 	
-	public void moveUp(){
-			
-	}
-	
-	public void moveLeft(){
-		
-	}
-	
-	public void moveRight(){
+	public void dig(){
 		
 	}
 	

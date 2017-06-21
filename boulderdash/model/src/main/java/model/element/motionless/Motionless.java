@@ -11,7 +11,7 @@ import model.element.Position;
 
 public abstract class Motionless {
 	/**The Position of the Motionless Element*/
-	protected Position position;
+	private Position position;
 	
 	public Motionless(Position position){
 		this.position = position;

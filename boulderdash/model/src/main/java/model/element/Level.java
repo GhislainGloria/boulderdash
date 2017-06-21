@@ -1,7 +1,10 @@
 package model.element;
 
 import java.util.ArrayList;
+
+import model.element.motionless.IMotionless;
 import model.element.motionless.Motionless;
+import model.element.mobile.IMobile;
 import model.element.mobile.Mobile;
 
 /**
@@ -16,19 +19,15 @@ public class Level implements ILevel{
 	public int ID;
 	/**Path for find the .txt in the computer*/
 	public String Path;
-	/**DimensionX*/
-	public double dimensionX;
-	/**DimensionY*/
-	public double dimensionY;
+	/**Dimension*/
+	public Dimension dimension;
 	/**List of mobiles elements */
-	public ArrayList<Mobile> mobile;
+	public ArrayList<IMobile> mobile;
 	/**List of motionless elements */
-	public ArrayList<Motionless> motionless;
+	public ArrayList<IMotionless> motionless;
 	
 	/**Create a Level*/
 	public Level(){
-		dimensionX = 0;
-		dimensionY = 0;
 		mobile = null;
 		motionless = null;
 	}
@@ -36,36 +35,24 @@ public class Level implements ILevel{
 	public Level(int ID, String Path) {
 		// TODO Auto-generated constructor stub
 	}
-
-	public double getDimensionX() {
-		return dimensionX;
+	
+	public void addMobile(IMobile mobile) {
+		
 	}
-
-	public void setDimensionX(double dimensionX) {
-		this.dimensionX = dimensionX;
+	
+	public void addMotionless(IMotionless motionless) {
+		
 	}
-
-	public double getDimensionY() {
-		return dimensionY;
-	}
-
-	public void setDimensionY(double dimensionY) {
-		this.dimensionY = dimensionY;
+	
+	public void setMobileHavesMoved() {
+		
 	}
 
 	public ArrayList<Mobile> getMobile() {
 		return mobile;
 	}
-
-	public void setMobile(ArrayList<Mobile> mobile) {
-		this.mobile = mobile;
-	}
-
 	public ArrayList<Motionless> getMotionless() {
 		return motionless;
 	}
 
-	public void setMotionless(ArrayList<Motionless> motionless) {
-		this.motionless = motionless;
-	}
 }

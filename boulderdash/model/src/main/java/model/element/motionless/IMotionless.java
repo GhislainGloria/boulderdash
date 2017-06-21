@@ -11,8 +11,6 @@ import model.element.Position;
 
 public interface IMotionless {
 	public abstract class Motionless {
-		/** ID of the Motionless element in the database */
-		int ID = 0;
 		/** Position of the Motionless element in the map */
 		Position position = null;
 	}

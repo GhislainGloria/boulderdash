@@ -11,8 +11,7 @@ import model.element.Position;
 
 public class Mud extends Motionless{
 	/**Create a bloc of mud*/
-	public Mud(int x, int y){
-		super(new Position(x,y));
+	public Mud(){
 		
 	}
 	/**
