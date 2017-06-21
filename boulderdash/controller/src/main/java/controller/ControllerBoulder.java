@@ -12,7 +12,7 @@ import view.IView;
  * @author chloe
  * @version 1.0
  */
-public class ControllerBoulder implements IController, IOrderPerformer {
+public class ControllerBoulder implements IController, IOrderPerform {
 
 	/** The view. */
 	private IView view;
@@ -142,7 +142,7 @@ public class ControllerBoulder implements IController, IOrderPerformer {
 	}
 
 	@Override
-	public IOrderPerformer getOrderPeformer() {
+	public IOrderPerform getOrderPerform() {
 		return this;
 	}
 }
