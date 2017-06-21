@@ -1,28 +1,28 @@
 package model;
 
 /**
- * <h1>The Class Example.</h1>
+ * <h1>The Class Level.</h1>
  *
  * @author Jean-Aymeric DIET jadiet@cesi.fr
  * @version 1.0
  */
-public class Example {
+public class Level {
 
     /** The id. */
     private final int id;
 
     /** The name. */
-    private String    name;
+    private String name;
 
     /**
-     * Instantiates a new example.
+     * Instantiates a new Level.
      *
      * @param id
      *            the id
      * @param name
      *            the name
      */
-    public Example(final int id, final String name) {
+    public Level(final int id, final String name) {
         super();
         this.id = id;
         this.name = name;

@@ -11,12 +11,12 @@ public class Position {
 	/**
 	 * Position Initial, Max and Min 
 	 */
-	private double x;
-	private double y;
-	private double maxX;
-	private double maxY;
-	private double minX;
-	private double minY;
+	private int x;
+	private int y;
+	private int maxX;
+	private int maxY;
+	private int minX;
+	private int minY;
 	
 	/**
 	 * Instantiate a new position
@@ -32,40 +32,49 @@ public class Position {
 	}
 	
 
-	public double getX() {
+	public Position(int x, int y) {
+		this.x = x;
+		this.y = y;
+		maxX = 0;
+		minX = 0;
+		minY = 0;
+	}
+
+
+	public int getX() {
 		return x;
 	}
-	public void setX(double x) {
+	public void setX(int x) {
 		this.x = x;
 	}
-	public double getY() {
+	public int getY() {
 		return y;
 	}
-	public void setY(double y) {
+	public void setY(int y) {
 		this.y = y;
 	}
-	public double getMaxX() {
+	public int getMaxX() {
 		return maxX;
 	}
-	public void setMaxX(double maxX) {
+	public void setMaxX(int maxX) {
 		this.maxX = maxX;
 	}
-	public double getMaxY() {
+	public int getMaxY() {
 		return maxY;
 	}
-	public void setMaxY(double maxY) {
+	public void setMaxY(int maxY) {
 		this.maxY = maxY;
 	}
-	public double getMinX() {
+	public int getMinX() {
 		return minX;
 	}
-	public void setMinX(double minX) {
+	public void setMinX(int minX) {
 		this.minX = minX;
 	}
-	public double getMinY() {
+	public int getMinY() {
 		return minY;
 	}
-	public void setMinY(double minY) {
+	public void setMinY(int minY) {
 		this.minY = minY;
 	}
 }

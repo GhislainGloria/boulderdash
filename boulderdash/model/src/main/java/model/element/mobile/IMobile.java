@@ -1,5 +1,7 @@
 package model.element.mobile;
 
+import model.element.Position;
+
 public interface IMobile {
-	int ID = 0;
+	Position position = null;
 }

@@ -1,5 +1,7 @@
 package model.element.motionless;
 
+import model.element.Position;
+
 /**
  * <h1>The class Wall can't be dig and don't move</h1>
  *
@@ -9,7 +11,7 @@ package model.element.motionless;
 
 public class Wall extends Motionless{
 	/**Create a Wall*/
-	public Wall(){
-		
+	public Wall(int x, int y){
+		super(new Position(x,y));
 	}
 }
