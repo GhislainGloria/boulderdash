@@ -28,30 +28,35 @@ public class Level implements ILevel{
 	
 	/**Create a Level*/
 	public Level(){
-		mobile = null;
-		motionless = null;
+
 	}
 
-	public Level(int ID, String Path) {
-		// TODO Auto-generated constructor stub
-	}
 	
+	/** Add a Mobile Element*/
 	public void addMobile(IMobile mobile) {
 		
 	}
 	
+	/** Remove a Mobile Element*/
+	public void removeMobile(IMobile mobile) {
+		
+	}
+	
+	/** Add a Motionless Element */
 	public void addMotionless(IMotionless motionless) {
 		
 	}
 	
+	/** Move a Mobile Element */
 	public void setMobileHavesMoved() {
 		
 	}
 
-	public ArrayList<Mobile> getMobile() {
+	public ArrayList<IMobile> getMobile() {
 		return mobile;
 	}
-	public ArrayList<Motionless> getMotionless() {
+	
+	public ArrayList<IMotionless> getMotionless() {
 		return motionless;
 	}
 
