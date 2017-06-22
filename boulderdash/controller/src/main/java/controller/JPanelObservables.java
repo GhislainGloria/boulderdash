@@ -3,7 +3,7 @@ package controller;
 import java.util.Observable;
 import java.util.Observer;
 import javax.swing.JPanel;
-import 
+import model.ModelObservable;
 
 public class JPanelObservables extends JPanel implements Observer {
 
