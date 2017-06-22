@@ -16,7 +16,7 @@ import model.element.mobile.object.Object;
 
 public class LevelMap implements ILevelMap{
 	/**Dimension*/
-<<<<<<< HEAD
+
 	private Dimension dimension;
 	/**2D Tab of elements */
 	private Element[][] elements;
@@ -26,49 +26,5 @@ public class LevelMap implements ILevelMap{
 	private ArrayList<Object> objects;
 	
 	private Element RockFord;
-=======
-	public Dimension dimension;
-	/**2D Tab of elements */
-	public Element[][] elements;
->>>>>>> branch 'Ghislain' of https://github.com/GhislainGloria/boulderdash
-	
-	/**Create a Level*/
-	public LevelMap(){
-<<<<<<< HEAD
-=======
-		
-	}
-
-	
-	/** Add a Mobile Element*/
-	public void addMobile(IMobile mobile) {
-		
-	}
-	
-	/** Remove a Mobile Element*/
-	public void removeMobile(IMobile mobile) {
-		
-	}
-	
-	/** Add a Motionless Element */
-	public void addMotionless(IMotionless motionless) {
-		
-	}
-	
-	/** Move a Mobile Element */
-	public void setMobileHavesMoved() {
->>>>>>> branch 'Ghislain' of https://github.com/GhislainGloria/boulderdash
-		
-	}
-
-<<<<<<< HEAD
-	
-	
-	
-	
-
-=======
->>>>>>> branch 'Ghislain' of https://github.com/GhislainGloria/boulderdash
-
 
 }
