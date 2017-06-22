@@ -11,7 +11,8 @@ import model.element.Position;
 
 public class Mud extends Motionless{
 	/**Create a bloc of mud*/
-	public Mud(){
+	public Mud (Position position, String image){
+		setPosition(position);
 		
 	}
 	/**

@@ -6,7 +6,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import model.element.Level;
+import model.Level;
 
 
 /**
@@ -21,10 +21,10 @@ public abstract class LevelDAO extends AbstractDAO {
     private static String sqlLevelById   = "{call findLevelById(?)}";
 
     /** The sql Level by name. */
-    private static String sqlLevelByName = "{call findLevelByPath(?)}";
+    //private static String sqlLevelByName = "{call findLevelByPath(?)}";
 
     /** The sql all Levels. */
-    private static String sqlAllLevels   = "{call findAllLevel()}";
+    //private static String sqlAllLevels   = "{call findAllLevel()}";
 
     /** The id column index. */
     private static int    idColumnIndex    = 1;
@@ -64,6 +64,7 @@ public abstract class LevelDAO extends AbstractDAO {
      * @throws SQLException
      *             the SQL exception
      */
+    /*
     public static Level getLevelByName(final String name) throws SQLException {
         final CallableStatement callStatement = prepareCall(sqlLevelByName);
         Level level = null;
@@ -72,13 +73,13 @@ public abstract class LevelDAO extends AbstractDAO {
         if (callStatement.execute()) {
             final ResultSet result = callStatement.getResultSet();
             if (result.first()) {
-                level = new Level(result.getInt(idColumnIndex), result.getString(nameColumnIndex));
+                level = new Level();
             }
             result.close();
         }
         return level;
     }
-
+	*/
     /**
      * Gets the all Levels.
      *
@@ -86,6 +87,7 @@ public abstract class LevelDAO extends AbstractDAO {
      * @throws SQLException
      *             the SQL exception
      */
+    /*
     public static List<Level> getAllLevels() throws SQLException {
         final ArrayList<Level> Levels = new ArrayList<Level>();
         final CallableStatement callStatement = prepareCall(sqlAllLevels);
@@ -93,10 +95,11 @@ public abstract class LevelDAO extends AbstractDAO {
             final ResultSet result = callStatement.getResultSet();
 
             for (boolean isResultLeft = result.first(); isResultLeft; isResultLeft = result.next()) {
-                Levels.add(new Level(result.getInt(idColumnIndex), result.getString(nameColumnIndex)));
+                Levels.add(new Level());
             }
             result.close();
         }
         return Levels;
     }
+    */
 }

@@ -3,9 +3,7 @@ package model.element;
 import java.util.ArrayList;
 
 import model.element.motionless.IMotionless;
-import model.element.motionless.Motionless;
 import model.element.mobile.IMobile;
-import model.element.mobile.Mobile;
 
 /**
  * <h1>The class Level have dimensions, one counter, a list of mobile elements and a list of motionless elements.</h1>
@@ -14,7 +12,7 @@ import model.element.mobile.Mobile;
  * @version 1.0
  */
 
-public class Level implements ILevel{
+public class LevelMap implements ILevelMap{
 	/**ID in the Database*/
 	public int ID;
 	/**Path for find the .txt in the computer*/
@@ -25,9 +23,10 @@ public class Level implements ILevel{
 	public ArrayList<IMobile> mobile;
 	/**List of motionless elements */
 	public ArrayList<IMotionless> motionless;
+	/**
 	
 	/**Create a Level*/
-	public Level(){
+	public LevelMap(){
 
 	}
 

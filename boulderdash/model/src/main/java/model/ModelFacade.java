@@ -2,8 +2,7 @@ package model;
 
 import java.sql.SQLException;
 import java.util.List;
-
-import model.dao.ExampleDAO;
+import model.dao.LevelDAO;
 
 /**
  * <h1>The Class ModelFacade provides a facade of the Model component.</h1>
@@ -20,20 +19,41 @@ public class ModelFacade implements IModel {
         super();
     }
 
+    
     /**
-     * @see model.IModel#getExampleById(int)
+     *
+     * @see model.IModel#getLevelById(int)
      */
     @Override
-    public Example getExampleById(final int id) throws SQLException {
-        return ExampleDAO.getExampleById(id);
+    public Level getLevelById(final int id) throws SQLException {
+        return LevelDAO.getLevelById(id);
     }
-
-    /**
+    
+    /*
+	@Override
+	public Example getExampleById(int id) throws SQLException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	*/
+    /*
+     * (non-Javadoc)
+     * @see model.IModel#getExampleByName(java.lang.String)
+     */
+   /* @Override
+    public Example getExampleByName(final String name) throws SQLException {
+        return ExampleDAO.getExampleByName(name);
+    }
+	*/
+    
+    /*
+     * (non-Javadoc)
      * @see model.IModel#getAllExamples()
      */
-    @Override
+   /* @Override
     public List<Example> getAllExamples() throws SQLException {
         return ExampleDAO.getAllExamples();
     }
+    */
 
 }

@@ -6,7 +6,11 @@ package model.element;
  */
 public class Element {
 	
+	/** 
+	 * Position and Dimension of an Element 
+	 */
 	private Position position;
+	private Dimension dimension;
 	
 	public Position getPosition() {
 		return position;
@@ -16,7 +20,16 @@ public class Element {
 		this.position = position;
 	}
 	
-	public void placeInMap() {
+	public Dimension getDimension() {
+		return dimension;
+	}
+
+	public void setDimension(Dimension dimension) {
+		this.dimension = dimension;
+	}
+	
+	/**Place the Element in the Level */
+	public void placeILevelp() {
 
 	}
 }

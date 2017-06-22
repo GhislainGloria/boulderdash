@@ -5,15 +5,15 @@ import java.util.ArrayList;
 import model.element.mobile.Mobile;
 import model.element.motionless.Motionless;
 
-public interface ILevel {
+public interface ILevelMap {
 	/**Id of the level*/
 	public int id = 1;  
 	/**Path of the .txt*/
 	public String path = "";
 	/**DimensionX*/
-	public double dimensionX = 0;
+	public int dimensionX = 0;
 	/**DimensionY*/
-	public double dimensionY = 0;
+	public int dimensionY = 0;
 	/**List of mobiles elements */
 	public ArrayList<Mobile> mobiles = null;
 	/**List of motionless elements */

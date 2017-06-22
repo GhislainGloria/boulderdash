@@ -61,6 +61,6 @@ public class Level {
      */
     @Override
     public String toString() {
-        return this.getId() + " : " + this.getName();
+        return this.getName();
     }
 }

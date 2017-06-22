@@ -17,5 +17,7 @@
 			<attribute name="maven.scope" value="test"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="src" path="/controller"/>
+	<classpathentry kind="src" path="/model"/>
 	<classpathentry kind="output" path="boulderdash/contract/target/classes"/>
 </classpath>
