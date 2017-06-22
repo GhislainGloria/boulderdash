@@ -84,8 +84,10 @@ public class GameFrame implements KeyListener{
 	       
 		   for(int k=0; k < map.getWidth(); k++){
 	        
-			   char c = map.get;
+			   char c = map.getCharacter(i, k);
+			   
 			   Tile tile;
+			   IMobile monster = null;
 	        
 //TO-DO changer les caracteres + monstre creuse mud? + adapter nom monstres
 			   
@@ -101,17 +103,27 @@ public class GameFrame implements KeyListener{
 	        		break;
 	        	case 'f':	tile = this.wallTile;		
 	        		break;
-	        	case 'f':	tile = this.emptyTile
-	        				
-	        				this.monsters.add();		
+	        	case 'f':	tile = this.emptyTile	
+	        				monster = this.bubble;		
         		break;
-	        	
-	        		
-	        	
+	        	case 'f':	tile = this.emptyTile
+        					monster = this.pingPing;		
+	        	break;
+	        	case 'f':	tile = this.emptyTile
+	    					monster = this.puffPuff;		
+	        	break;
+	        	case 'f':	tile = this.emptyTile
+	    					monster = this.tackyTacky;		
+	        	break;
+        		default:	tile = this.emptyTile;	
 	        	
 	        }
 	        
 	        boardFrame.addSquare(tile, i, k);
+	        
+	        if(monster != null){
+	        	this.monsters.add(monster);
+	        }
 	        
 	       }
 	   
@@ -149,6 +161,8 @@ public class GameFrame implements KeyListener{
     	Tile emptyTile = new Tile("empty");
     	Tile mudTile = new Tile("Mud");
     	Tile wallTile = new Tile("wall");
+    	
+    	IMobile bubble = new IMobile()
     	
 
     }
