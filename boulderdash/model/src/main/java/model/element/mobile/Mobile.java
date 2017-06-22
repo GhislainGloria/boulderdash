@@ -1,6 +1,7 @@
 package model.element.mobile;
 
 import model.element.Direction;
+import model.element.Element;
 import model.element.Position;
 
 /**
@@ -10,7 +11,7 @@ import model.element.Position;
  * @version 1.0
  */
 
-public abstract class Mobile implements IMobile {
+public abstract class Mobile extends Element implements IMobile {
 	/** The position of the Mobile object. */
 	
 	private Direction direction;

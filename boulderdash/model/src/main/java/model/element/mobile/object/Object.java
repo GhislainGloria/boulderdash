@@ -1,5 +1,8 @@
 package model.element.mobile.object;
 
+import model.element.Position;
+import model.element.mobile.Mobile;
+
 /**
  * <h1>The class Object can move with gravity</h1>
  *
@@ -7,9 +10,10 @@ package model.element.mobile.object;
  * @version 1.0
  */
 
-public abstract class Object {
+public abstract class Object extends Mobile {
 	/**Make the object fall if he don't have motionless element under him */
-	public void Fall(){
-		
+	public void Fall(Position position){
 	}
+	
+	
 }

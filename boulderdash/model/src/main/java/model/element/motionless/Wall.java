@@ -10,8 +10,9 @@ import model.element.Position;
  */
 
 public class Wall extends Motionless{
-	/**Create a Wall*/
-	public Wall(int x, int y){
-		super(new Position(x,y));
+	/**Create a Wall
+	 * @param position */
+	public Wall(Position position){
+		super(position);
 	}
 }
