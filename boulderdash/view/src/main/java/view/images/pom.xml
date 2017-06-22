@@ -6,13 +6,6 @@
 		<artifactId>boulderdash</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>view</artifactId>
-	<name>boulderdash..view</name>
-	<dependencies>
-		<dependency>
-			<groupId>fr.exia</groupId>
-			<artifactId>controller</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-	</dependencies>
+	<artifactId>contract</artifactId>
+	<name>boulderdash.contract</name>
 </project>

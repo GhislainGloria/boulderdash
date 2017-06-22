@@ -7,15 +7,5 @@
 	<classpathentry kind="src" path="boulderdash/model/src/main/java"/>
 	<classpathentry kind="src" path="boulderdash/view/src/main/java"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="C:/Users/gglor/.m2/repository/junit/junit/4.11/junit-4.11.jar">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="javadoc_location" value="jar:file:/C:/Users/gglor/.m2/repository/junit/junit/4.11/junit-4.11-javadoc.jar!/"/>
-			<attribute name="maven.groupId" value="junit"/>
-			<attribute name="maven.artifactId" value="junit"/>
-			<attribute name="maven.version" value="4.11"/>
-			<attribute name="maven.scope" value="test"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry kind="output" path="boulderdash/contract/target/classes"/>
 </classpath>

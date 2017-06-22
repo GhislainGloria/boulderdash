@@ -27,8 +27,17 @@ public class GameFrame implements KeyListener{
     private static final int squareSize = 50;
     
 //    private IOrderPerform  orderPerform;
-
-
+    
+    /** The map */
+    private IMap map;
+    
+    /** The character */
+    private IMobile character;
+    
+    /** The array of pawns*/
+    private ArrayList<IMobile> pawns;
+    
+    
 
  
     public GameFrame(){
@@ -47,37 +56,24 @@ public class GameFrame implements KeyListener{
     
     public void paint(LevelMap map){
     	
-    	/**
-    	   * @author chloe
-    	   */
-    	  
-    	  /**
-    	   * The File.
-    	   */
-    	//  FileReader f = null;
-    	        BufferedReader f = null;
-    	        
-    	  try {
-    		  
-    		  
-    		  
+    	
     	   
     	   for(int i=0; i < map.getHeight(); i++) {
     	       
     		   for(int k=0; k < map.getWidth(); k++){
     	        
     			   char c = map.get;
-    			   String path = "";
+    			   Tile tile;
     	        
     	        switch (c){
     	        
-    	        	case 'O':	path = "diamond.png";
-    	        	case 'E':	path = "TackyTacky.png";
-    	        	case 'W':	path = "wall.png";
-    	        	case 'M':	path = "Mud.png";
-    	        	case 'R':	path = "boulder.png";
-    	        	case 'V':	path = "empty.png";
-    	        	case 'H':	path = "rockfordface.png";
+    	        	case 'O':	tile = new Tile("diamond");
+    	        	case 'E':	tile = "TackyTacky.png";
+    	        	case 'W':	tile = "wall.png";
+    	        	case 'M':	tile = "Mud.png";
+    	        	case 'R':	tile = "boulder.png";
+    	        	case 'V':	tile = "empty.png";
+    	        	case 'H':	tile = "rockfordface.png";
     	        	 
     	        }
     	        
@@ -85,23 +81,7 @@ public class GameFrame implements KeyListener{
     	       
     	        
     	       }
-    	             j += 16;
-    	   }
-    	   /**
-    	    * @throws IOException
-    	    *             Signals that an I/O exception has occurred.
-    	    */
-    	  } catch (FileNotFoundException e) {
-    	   e.printStackTrace();
-    	  } catch (IOException e) {
-    	   e.printStackTrace();
-    	  } finally {
-    	   try {
-    	    if (f != null)
-    	     f.close();
-    	   } catch (IOException e) {
-    	    e.printStackTrace();
-    	   }
+    	   
 
     	  }
     }
