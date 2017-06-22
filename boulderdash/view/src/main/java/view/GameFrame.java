@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import javax.swing.*;
 
 import fr.exia.showboard.BoardFrame;
-
+import fr.exia.showboard.IPawn;
 //import controller
 import controller.IOrderPerform;
 import controller.UserOrder;
@@ -43,6 +43,9 @@ public class GameFrame implements KeyListener{
     /** The array of monsters*/
     private ArrayList<IMobile> monsters;
     
+    /** The BoardFrame */
+    final BoardFrame boardFrame;
+    
 
  
     public GameFrame(final IMap map, final IMobile character, final ArrayList<IMobile> monsters){
@@ -54,17 +57,28 @@ public class GameFrame implements KeyListener{
     
     private void initBoardFrame(){
     	
-    	final BoardFrame boardFrame = new BoardFrame("View");
+    	boardFrame = new BoardFrame("View");
         boardFrame.setDimension(new Dimension());
         boardFrame.setDisplayFrame(this.view);
         boardFrame.setSize(this.view.width * squareSize, this.view.height * squareSize);
         boardFrame.addKeyListener(this);
+        
+        
+        
+        for (int x = 0; x < this.getMap().getWidth(); x++) {
+			for (int y = 0; y < this.getMap().getHeight(); y++) {
+				boardFrame.addSquare(this.map.getOnTheMapXY(x, y), x, y);
+			}
+		}
+        
+        boardFrame.addPawn(this.getCharacter());
+		for (IMobile monster : this.monsters) {
+			boardFrame.addPawn(monster);
+		}
     	
     }
     
     public void paintMap(LevelMap map){
-    	
-    	this.loadTiles();
     	   
     	for(int i=0; i < map.getHeight(); i++) {
 	       
@@ -73,14 +87,10 @@ public class GameFrame implements KeyListener{
 			   char c = map.get;
 			   Tile tile;
 	        
+//TO-DO changer les caracteres + monstre creuse mud? + adapter nom monstres
+			   
 	        switch (c){
 	        
-	        	case 'U':	tile = this.puffTile;
-	        				this.monsters.add(tile);
-	        		break;
-	        	case 'B':	tile = this.bubbleTile;
-	        				this.monsters.add(tile);
-	        		break;
 	        	case 'W':	tile = this.boulderTile;
 	        		break;
 	        	case 'M':	tile = this.diamondtile;
@@ -89,18 +99,19 @@ public class GameFrame implements KeyListener{
 	        		break;
 	        	case 'M':	tile = this.mudTile;
 	        		break;
-	        	case 'f':	tile = this.rockfordTile;
+	        	case 'f':	tile = this.wallTile;		
 	        		break;
-	        	case 'T':	tile = this.tackTile;
-	        				this.monsters.add(tile);
-	        		break;
-	        	case 'f':	tile = this.wallTile;
-	        		break;
-	        	case 'P':	tile = this.pingTile
-	        					this.monsters.add(tile);
-	        		break;
+	        	case 'f':	tile = this.emptyTile
+	        				
+	        				this.monsters.add();		
+        		break;
+	        	
+	        		
+	        	
 	        	
 	        }
+	        
+	        boardFrame.addSquare(tile, i, k);
 	        
 	       }
 	   
@@ -133,16 +144,13 @@ public class GameFrame implements KeyListener{
     
     protected void loadTiles(){
     	
-    	Tile puffTile = new Tile("Puffpuff");
-    	Tile bubbleTile = new Tile("Bubble");
     	Tile boulderTile = new Tile("boulder");
-    	Tile diamondtile = new Tile("diamond");
+    	Tile diamondTile = new Tile("diamond");
     	Tile emptyTile = new Tile("empty");
     	Tile mudTile = new Tile("Mud");
-    	Tile rockfordTile = new Tile("rockfordface");
-    	Tile tackTile = new Tile("TackyTacky");
     	Tile wallTile = new Tile("wall");
-    	Tile pingTile = new Tile("Pingping");
+    	
+
     }
     
 	@Override
@@ -163,14 +171,6 @@ public class GameFrame implements KeyListener{
 		
 	}
 	
-	protected int getHeight(){
-		return this.height;
-	}
-	
-	protected int getWidth(){
-		return this.width;
-	}
-	
 	protected IMap getMap() {
 		return this.map;
 	}
@@ -187,8 +187,8 @@ public class GameFrame implements KeyListener{
 		this.orderPerformer = newPerformer;
 	}
 
-	protected IMobile getMyCharacter() {
-		return this.myCharacter;
+	protected IMobile getCharacter() {
+		return this.character;
 	}
 	
 	/**
