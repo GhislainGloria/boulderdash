@@ -13,21 +13,14 @@ import model.element.mobile.IMobile;
  */
 
 public class LevelMap implements ILevelMap{
-	/**ID in the Database*/
-	public int ID;
-	/**Path for find the .txt in the computer*/
-	public String Path;
 	/**Dimension*/
 	public Dimension dimension;
-	/**List of mobiles elements */
-	public ArrayList<IMobile> mobile;
-	/**List of motionless elements */
-	public ArrayList<IMotionless> motionless;
-	/**
+	/**2D Tab of elements */
+	public Element[][] elements;
 	
 	/**Create a Level*/
 	public LevelMap(){
-
+		
 	}
 
 	
@@ -51,12 +44,6 @@ public class LevelMap implements ILevelMap{
 		
 	}
 
-	public ArrayList<IMobile> getMobile() {
-		return mobile;
-	}
-	
-	public ArrayList<IMotionless> getMotionless() {
-		return motionless;
-	}
+
 
 }

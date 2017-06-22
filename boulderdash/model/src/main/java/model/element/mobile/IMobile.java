@@ -1,7 +1,7 @@
 package model.element.mobile;
 
-import model.element.Position;
+import model.element.Direction;
 
 public interface IMobile {
-	Position position = null;
+	Direction direction = null;
 }

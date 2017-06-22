@@ -1,5 +1,7 @@
 package model.element.mobile.object;
 
+import model.element.mobile.character.RockFord;
+
 /**
  * <h1>The class Diamond add Diamond in the score</h1>
  *
@@ -7,14 +9,16 @@ package model.element.mobile.object;
  * @version 1.0
  */
 
-public class Diamond {
+public class Diamond extends Object{
 	/**Create an instance of a Diamond*/
 	public Diamond(){
-		
+		super();
 	}
 	
 	/**Make the Diamond disappeared when RockFord is in the same Position*/
-	public void beTake(){
-		
+	public void beTake(RockFord rockford){
+		if (rockford.getPosition() == this.getPosition()){
+			
+		}
 	}
 }
