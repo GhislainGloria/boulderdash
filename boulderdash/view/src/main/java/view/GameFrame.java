@@ -1,13 +1,18 @@
 package view;
 
 import java.awt.Dimension;
+import java.awt.Paint;
 import java.awt.Rectangle;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.io.*;
+
+import javax.swing.*;
 
 import fr.exia.showboard.BoardFrame;
 //import controller
-
+import controller.IOrderPerform;
+import controller.UserOrder;
 
 
 public class GameFrame implements KeyListener{
@@ -36,11 +41,69 @@ public class GameFrame implements KeyListener{
         boardFrame.setDimension(new Dimension());
         boardFrame.setDisplayFrame(this.fullView);
         boardFrame.setSize(this.fullView.width * squareSize, this.fullView.height * squareSize);
-        boardFrame.setHeightLooped(true);
         boardFrame.addKeyListener(this);
-        boardFrame.setFocusable(true);
-        boardFrame.setFocusTraversalKeysEnabled(false);
     	
+    }
+    
+    public void paint(LevelMap map){
+    	
+    	/**
+    	   * @author chloe
+    	   */
+    	  
+    	  /**
+    	   * The File.
+    	   */
+    	//  FileReader f = null;
+    	        BufferedReader f = null;
+    	        
+    	  try {
+    		  
+    		  
+    		  
+    	   
+    	   for(int i=0; i < map.getHeight(); i++) {
+    	       
+    		   for(int k=0; k < map.getWidth(); k++){
+    	        
+    			   char c = map.get;
+    			   String path = "";
+    	        
+    	        switch (c){
+    	        
+    	        	case 'O':	path = "diamond.png";
+    	        	case 'E':	path = "TackyTacky.png";
+    	        	case 'W':	path = "wall.png";
+    	        	case 'M':	path = "Mud.png";
+    	        	case 'R':	path = "boulder.png";
+    	        	case 'V':	path = "empty.png";
+    	        	case 'H':	path = "rockfordface.png";
+    	        	 
+    	        }
+    	        
+    	        
+    	       
+    	        
+    	       }
+    	             j += 16;
+    	   }
+    	   /**
+    	    * @throws IOException
+    	    *             Signals that an I/O exception has occurred.
+    	    */
+    	  } catch (FileNotFoundException e) {
+    	   e.printStackTrace();
+    	  } catch (IOException e) {
+    	   e.printStackTrace();
+    	  } finally {
+    	   try {
+    	    if (f != null)
+    	     f.close();
+    	   } catch (IOException e) {
+    	    e.printStackTrace();
+    	   }
+
+    	  }
     }
 
     /**
@@ -64,6 +127,10 @@ public class GameFrame implements KeyListener{
                 break;
         }
         return userOrder;
+    }
+    
+    protected void loadImages(){
+    	
     }
     
 	@Override
