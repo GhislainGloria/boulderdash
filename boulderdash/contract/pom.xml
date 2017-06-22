@@ -6,17 +6,6 @@
 		<artifactId>boulderdash</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>view</artifactId>
-	<name>boulderdash..view</name>
-	<dependencies>
-		<dependency>
-			<groupId>fr.exia</groupId>
-<<<<<<< HEAD
-			<artifactId>controller</artifactId>
-=======
-			<artifactId>contract</artifactId>
->>>>>>> branch 'Martin' of https://github.com/GhislainGloria/boulderdash
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-	</dependencies>
+	<artifactId>contract</artifactId>
+	<name>boulderdash.contract</name>
 </project>
