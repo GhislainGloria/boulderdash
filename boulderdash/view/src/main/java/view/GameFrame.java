@@ -1,6 +1,7 @@
 package view;
 
 import java.awt.Dimension;
+
 import java.awt.Paint;
 import java.awt.Rectangle;
 import java.awt.event.KeyEvent;
@@ -10,9 +11,13 @@ import java.io.*;
 import javax.swing.*;
 
 import fr.exia.showboard.BoardFrame;
+
 //import controller
 import controller.IOrderPerform;
 import controller.UserOrder;
+
+import model.IMap;
+import model.element.mobile.IMobile;
 
 
 public class GameFrame implements KeyListener{
@@ -23,7 +28,7 @@ public class GameFrame implements KeyListener{
 	/** The initial frame size. */
     private static final int  defaultFrameSize = 700;
     
-    private Rectangle        fullView= new Rectangle(0, 0, width, height);
+    private Rectangle view = new Rectangle(0, 0, width, height);
     private static final int squareSize = 50;
     
 //    private IOrderPerform  orderPerform;
@@ -46,44 +51,44 @@ public class GameFrame implements KeyListener{
     
     private void initBoardFrame(){
     	
-    	final BoardFrame boardFrame = new BoardFrame("Full view");
+    	final BoardFrame boardFrame = new BoardFrame("View");
         boardFrame.setDimension(new Dimension());
-        boardFrame.setDisplayFrame(this.fullView);
-        boardFrame.setSize(this.fullView.width * squareSize, this.fullView.height * squareSize);
+        boardFrame.setDisplayFrame(this.view);
+        boardFrame.setSize(this.view.width * squareSize, this.view.height * squareSize);
         boardFrame.addKeyListener(this);
     	
     }
     
-    public void paint(LevelMap map){
+    public void paintMap(LevelMap map){
     	
     	
     	   
-    	   for(int i=0; i < map.getHeight(); i++) {
-    	       
-    		   for(int k=0; k < map.getWidth(); k++){
-    	        
-    			   char c = map.get;
-    			   Tile tile;
-    	        
-    	        switch (c){
-    	        
-    	        	case 'O':	tile = new Tile("diamond");
-    	        	case 'E':	tile = "TackyTacky.png";
-    	        	case 'W':	tile = "wall.png";
-    	        	case 'M':	tile = "Mud.png";
-    	        	case 'R':	tile = "boulder.png";
-    	        	case 'V':	tile = "empty.png";
-    	        	case 'H':	tile = "rockfordface.png";
-    	        	 
-    	        }
-    	        
-    	        
-    	       
-    	        
-    	       }
-    	   
+	   for(int i=0; i < map.getHeight(); i++) {
+	       
+		   for(int k=0; k < map.getWidth(); k++){
+	        
+			   char c = map.get;
+			   Tile tile;
+	        
+	        switch (c){
+	        
+	        	case 'U':	tile = this.puffTile;
+	        	case 'B':	tile = this.bubbleTile;
+	        	case 'W':	tile = this.boulderTile;
+	        	case 'M':	tile = this.diamondtile;
+	        	case 'R':	tile = this.emptyTile;
+	        	case 'M':	tile = this.mudTile;
+	        	case '':	tile = this.rockfordTile;
+	        	case 'T':	tile = this.tackTile;
+	        	case '':	tile = this.wallTile;
+	        	case 'P':	tile = this.pingTile;
+	        	
+	        }
+	        
+	       }
+	   
 
-    	  }
+	  }
     }
 
     /**
@@ -109,8 +114,18 @@ public class GameFrame implements KeyListener{
         return userOrder;
     }
     
-    protected void loadImages(){
+    protected void loadTiles(){
     	
+    	Tile puffTile = new Tile("Puffpuff");
+    	Tile bubbleTile = new Tile("Bubble");
+    	Tile boulderTile = new Tile("boulder");
+    	Tile diamondtile = new Tile("diamond");
+    	Tile emptyTile = new Tile("empty");
+    	Tile mudTile = new Tile("Mud");
+    	Tile rockfordTile = new Tile("rockfordface");
+    	Tile tackTile = new Tile("TackyTacky");
+    	Tile wallTile = new Tile("wall");
+    	Tile pingTile = new Tile("Pingping");
     }
     
 	@Override
@@ -131,13 +146,46 @@ public class GameFrame implements KeyListener{
 		
 	}
 	
-	public int getHeight(){
+	protected int getHeight(){
 		return this.height;
 	}
 	
-	public int getWidth(){
+	protected int getWidth(){
 		return this.width;
 	}
+	
+	protected IMap getMap() {
+		return this.map;
+	}
+	
+	protected void setCharacter(final IMobile character) {
+		this.character = character;
+	}
+	
+	protected void setView(final Rectangle view) {
+		this.view = view;
+	}
+	
+	public void setOrderPerformer(final IOrderPerformer newPerformer) {
+		this.orderPerformer = newPerformer;
+	}
+
+	protected IMobile getMyCharacter() {
+		return this.myCharacter;
+	}
+	
+	/**
+	 * 
+	 * @param newPawns
+	 *            The pawn list.
+	 */
+	protected void setPawns(final ArrayList<IMobile> newPawns) {
+		this.pawns = newPawns;
+	}
+	
+	
+	
+	
 
 
 }
