@@ -7,6 +7,7 @@ import java.awt.Rectangle;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.io.*;
+import java.util.ArrayList;
 
 import javax.swing.*;
 
@@ -39,13 +40,15 @@ public class GameFrame implements KeyListener{
     /** The character */
     private IMobile character;
     
-    /** The array of pawns*/
-    private ArrayList<IMobile> pawns;
-    
+    /** The array of monsters*/
+    private ArrayList<IMobile> monsters;
     
 
  
-    public GameFrame(){
+    public GameFrame(final IMap map, final IMobile character, final ArrayList<IMobile> monsters){
+    	this.setMap(map);
+    	this.setCharacter(character);
+    	this.setMonsters(monsters);
     	this.initBoardFrame();
     }
     
@@ -61,9 +64,9 @@ public class GameFrame implements KeyListener{
     
     public void paintMap(LevelMap map){
     	
-    	
+    	this.loadTiles();
     	   
-	   for(int i=0; i < map.getHeight(); i++) {
+    	for(int i=0; i < map.getHeight(); i++) {
 	       
 		   for(int k=0; k < map.getWidth(); k++){
 	        
@@ -73,15 +76,29 @@ public class GameFrame implements KeyListener{
 	        switch (c){
 	        
 	        	case 'U':	tile = this.puffTile;
+	        				this.monsters.add(tile);
+	        		break;
 	        	case 'B':	tile = this.bubbleTile;
+	        				this.monsters.add(tile);
+	        		break;
 	        	case 'W':	tile = this.boulderTile;
+	        		break;
 	        	case 'M':	tile = this.diamondtile;
+	        		break;
 	        	case 'R':	tile = this.emptyTile;
+	        		break;
 	        	case 'M':	tile = this.mudTile;
-	        	case '':	tile = this.rockfordTile;
+	        		break;
+	        	case 'f':	tile = this.rockfordTile;
+	        		break;
 	        	case 'T':	tile = this.tackTile;
-	        	case '':	tile = this.wallTile;
-	        	case 'P':	tile = this.pingTile;
+	        				this.monsters.add(tile);
+	        		break;
+	        	case 'f':	tile = this.wallTile;
+	        		break;
+	        	case 'P':	tile = this.pingTile
+	        					this.monsters.add(tile);
+	        		break;
 	        	
 	        }
 	        
@@ -179,13 +196,8 @@ public class GameFrame implements KeyListener{
 	 * @param newPawns
 	 *            The pawn list.
 	 */
-	protected void setPawns(final ArrayList<IMobile> newPawns) {
-		this.pawns = newPawns;
+	protected void setMonsters(final ArrayList<IMobile> monsters) {
+		this.monsters = monsters;
 	}
 	
-	
-	
-	
-
-
 }
