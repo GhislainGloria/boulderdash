@@ -51,7 +51,7 @@ public class LevelMap implements ILevelMap{
 	 */
 	public LevelMap() throws SQLException { 
 				
-		String Level = getMe();
+	String Level = getMe();
 		int i = 0;
 		for(int y = 0 ;y<20; y++){
 			for (int x = 0; x<49 ;x++){
