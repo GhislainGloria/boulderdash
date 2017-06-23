@@ -12,6 +12,5 @@ import model.element.Position;
 public interface IMotionless {
 	public abstract class Motionless {
 		/** Position of the Motionless element in the map */
-		Position position = null;
 	}
 }

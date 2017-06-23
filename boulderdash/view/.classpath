@@ -28,5 +28,8 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="/home/martin/Downloads/jautodoc_1.14.0/plugins/net.sf.jautodoc_1.14.0.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/controller"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/model"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/boulderdashtrue"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
