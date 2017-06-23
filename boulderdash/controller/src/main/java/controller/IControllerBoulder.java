@@ -1,5 +1,5 @@
 /**
- * 
+ * Create interface IControllerBoulder
  */
 package controller;
 
@@ -7,8 +7,7 @@ package controller;
  * @author Corentin RAGUENEAU
  *
  */
-public interface IControllerBoulder 
-{
-	public void play();
-	public void getOrderPerformer();
+public interface IControllerBoulder {
+public void play();
+public void getOrderPerformer();
 }

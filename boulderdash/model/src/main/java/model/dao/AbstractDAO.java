@@ -1,8 +1,12 @@
+/*
+ * 
+ */
 package model.dao;
 
 import java.sql.CallableStatement;
 import java.sql.ResultSet;
 
+// TODO: Auto-generated Javadoc
 /**
  * <h1>The Class AbstractDAO.</h1>
  * 
