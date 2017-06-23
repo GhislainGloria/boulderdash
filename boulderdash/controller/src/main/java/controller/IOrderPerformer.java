@@ -3,7 +3,7 @@ package controller;
  * @author Corentin RAGUENEAU
  *
  */
-public interface IOrderPerform {
+public interface IOrderPerformer {
 /** @return this.getOrderPerform */
-IOrderPerform getOrderPerform(); 
+IOrderPerformer getOrderPerform(); 
 }

@@ -3,8 +3,7 @@
  */
 package model;
 
-import java.util.Observable;
-import java.util.Observer; 
+import java.util.Observable; 
 
 /**
  * @author Corentin RAGUENEAU

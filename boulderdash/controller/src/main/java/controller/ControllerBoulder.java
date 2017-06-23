@@ -12,7 +12,7 @@ import view.IView;
  * @author chloe
  * @version 1.0
  */
-public class ControllerBoulder implements IController, IOrderPerform {
+public class ControllerBoulder implements IController, IOrderPerformer {
 
 	/** The view. */
 	private IView view;
@@ -31,11 +31,10 @@ public class ControllerBoulder implements IController, IOrderPerform {
 	 * 
 	 * @return nLevel Choose the level
 	 */
-	public int choiceLevel() throws Exception {
+	public int choiceLevel() {
 		int nLevel;
 		do {
-			JOptionPane cLevel = new JOptionPane();
-			String numLevel = cLevel.showInputDialog(null, "Choose a level", "BoulderDash",
+			String numLevel = JOptionPane.showInputDialog(null, "Choose a level", "BoulderDash",
 					JOptionPane.QUESTION_MESSAGE);
 			nLevel = Integer.parseInt(numLevel);
 		} while (nLevel > 6 || nLevel < 0);
@@ -158,8 +157,7 @@ public class ControllerBoulder implements IController, IOrderPerform {
 		this.stackOrder = UserOrder.NOP;
 	}
 
-	@Override
-	public IOrderPerform getOrderPerform() {
-		return this.getOrderPerform();
+	public IOrderPerformer getOrderPerformer() {
+		return this.getOrderPerformer();
 	}
 }
