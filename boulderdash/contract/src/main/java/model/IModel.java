@@ -1,7 +1,6 @@
 package model;
 
 import java.sql.SQLException;
-import java.util.List;
 
 /**
  * <h1>The Interface IModel.</h1>
@@ -11,6 +10,7 @@ import java.util.List;
  */
 public interface IModel {
 
+<<<<<<< HEAD
 	/**
 	 * Gets the example by id.
 	 *
@@ -32,7 +32,33 @@ public interface IModel {
 	 *             the SQL exception
 	 */
 	Example getExampleByName(String name) throws SQLException;
+=======
+    /**
+     * Gets the level by id.
+     *
+     * @param id
+     *            the id
+     * @return the level by id
+     * @throws SQLException
+     *             the SQL exception
+     */
+	Level getLevelById(int id) throws SQLException;
+	
+	
+	//Example getExampleById(int id) throws SQLException;
+    /*
+     * Gets the example by name.
+     *
+     * @param name
+     *            the name
+     * @return the example by name
+     * @throws SQLException
+     *             the SQL exception
+     */
+    //Example getExampleByName(String name) throws SQLException;
+>>>>>>> refs/remotes/origin/master
 
+<<<<<<< HEAD
 	/**
 	 * Gets the all examples.
 	 *
@@ -42,4 +68,14 @@ public interface IModel {
 	 */
 	List<Example> getAllExamples() throws SQLException;
 
+=======
+    /*
+     * Gets the all examples.
+     *
+     * @return the all examples
+     * @throws SQLException
+     *             the SQL exception
+     */
+    //List<Example> getAllExamples() throws SQLException;
+>>>>>>> refs/remotes/origin/master
 }
