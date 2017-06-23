@@ -1,3 +1,6 @@
+/*
+ * 
+ */
 package model.dao;
 
 import java.sql.CallableStatement;
@@ -7,7 +10,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import model.Level;
-
 
 /**
  * <h1>The Class LevelDAO.</h1>
@@ -20,10 +22,10 @@ public abstract class LevelDAO extends AbstractDAO {
     /** The sql Level by id. */
     private static String sqlLevelById   = "{call findLevelById(?)}";
 
-    /** The sql Level by name. */
+    /* The sql Level by name. */
     //private static String sqlLevelByName = "{call findLevelByPath(?)}";
 
-    /** The sql all Levels. */
+    /* The sql all Levels. */
     //private static String sqlAllLevels   = "{call findAllLevel()}";
 
     /** The id column index. */
@@ -55,7 +57,7 @@ public abstract class LevelDAO extends AbstractDAO {
         return level;
     }
 
-    /**
+    /*
      * Gets the Level by name.
      *
      * @param name
@@ -80,7 +82,7 @@ public abstract class LevelDAO extends AbstractDAO {
         return level;
     }
 	*/
-    /**
+    /*
      * Gets the all Levels.
      *
      * @return the all Levels

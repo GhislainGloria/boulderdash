@@ -1,3 +1,6 @@
+/*
+ * 
+ */
 package model;
 
 import java.sql.SQLException;
@@ -21,7 +24,11 @@ public class ModelFacade implements IModel {
 
     
     /**
+     * Gets the level by id.
      *
+     * @param id the id
+     * @return the level by id
+     * @throws SQLException the SQL exception
      * @see model.IModel#getLevelById(int)
      */
     @Override
@@ -32,12 +39,11 @@ public class ModelFacade implements IModel {
     /*
 	@Override
 	public Example getExampleById(int id) throws SQLException {
-		// TODO Auto-generated method stub
 		return null;
 	}
 	*/
     /*
-     * (non-Javadoc)
+     *
      * @see model.IModel#getExampleByName(java.lang.String)
      */
    /* @Override
@@ -47,7 +53,7 @@ public class ModelFacade implements IModel {
 	*/
     
     /*
-     * (non-Javadoc)
+     *
      * @see model.IModel#getAllExamples()
      */
    /* @Override

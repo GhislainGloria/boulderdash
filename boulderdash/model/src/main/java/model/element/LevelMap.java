@@ -1,3 +1,6 @@
+/*
+ * 
+ */
 package model.element;
 
 import java.sql.SQLException;
@@ -24,22 +27,27 @@ import model.element.mobile.object.Object;
  */
 
 public class LevelMap implements ILevelMap{
-	/**Dimension*/
+	
+	/** Dimension. */
 	private Dimension dimension;
-	/**2D Tab of elements */
+	
+	/** 2D Tab of elements. */
 	private Element[][] elements;
-	/**List of Monster*/
+	
+	/** List of Monster. */
 	private ArrayList<Monster> monsters;
-	/**List of Object*/
+	
+	/** List of Object. */
 	private ArrayList<Object> objects;
-	/** The hero */
+	
+	/**  The hero. */
 	private Element RockFord;
 	
 	
 	/**
-	 * Function who create object for each characters assosiate
-	 * @throws SQLException 
+	 * Function who create object for each characters assosiate.
 	 *
+	 * @throws SQLException the SQL exception
 	 */
 	public LevelMap() throws SQLException { 
 				
@@ -87,9 +95,10 @@ public class LevelMap implements ILevelMap{
 	}
 	
 	/**
-	 * get String from BDD
-	 * @return
-	 * @throws SQLException
+	 * get String from BDD.
+	 *
+	 * @return the me
+	 * @throws SQLException the SQL exception
 	 */
 	public String getMe() throws SQLException {
 		try {
@@ -100,38 +109,92 @@ public class LevelMap implements ILevelMap{
 		return LevelDAO.getLevelById(1).toString();
 	}
 
+	/**
+	 *  
+	 *
+	 * @param elements the new elements
+	 * @see model.element.ILevelMap#setElements(model.element.Element[][])
+	 */
 	public void setElements(Element[][] elements) {
 		this.elements = elements;
 	}
 
+	/**
+	 * Gets the monsters.
+	 *
+	 * @return the monsters
+	 * @see model.element.ILevelMap#getMonsters()
+	 */
 	public ArrayList<Monster> getMonsters() {
 		return monsters;
 	}
 
+	/**
+	 * Sets the monsters.
+	 *
+	 * @param monsters the new monsters
+	 * @see model.element.ILevelMap#setMonsters(java.util.ArrayList)
+	 */
 	public void setMonsters(ArrayList<Monster> monsters) {
 		this.monsters = monsters;
 	}
 
+	/**
+	 * Gets the objects.
+	 *
+	 * @return the objects
+	 * @see model.element.ILevelMap#getObjects()
+	 */
 	public ArrayList<Object> getObjects() {
 		return objects;
 	}
 
+	/**
+	 * Sets the objects.
+	 *
+	 * @param objects the new objects
+	 * @see model.element.ILevelMap#setObjects(java.util.ArrayList)
+	 */
 	public void setObjects(ArrayList<Object> objects) {
 		this.objects = objects;
 	}
 
+	/**
+	 * Gets the rock ford.
+	 *
+	 * @return the rock ford
+	 * @see model.element.ILevelMap#getRockFord()
+	 */
 	public Element getRockFord() {
 		return RockFord;
 	}
 
+	/**
+	 * Sets the rock ford.
+	 *
+	 * @param rockFord the new rock ford
+	 * @see model.element.ILevelMap#setRockFord(model.element.Element)
+	 */
 	public void setRockFord(Element rockFord) {
 		RockFord = rockFord;
 	}
 
+	/**
+	 * Sets the dimension.
+	 *
+	 * @param dimension the new dimension
+	 * @see model.element.ILevelMap#setDimension(model.element.Dimension)
+	 */
 	public void setDimension(Dimension dimension) {
 		this.dimension = dimension;
 	}
 	
+	/**
+	 * Gets the dimension.
+	 *
+	 * @return the dimension
+	 * @see model.element.ILevelMap#getDimension()
+	 */
 	public Dimension getDimension() {
 		return dimension;
 	}

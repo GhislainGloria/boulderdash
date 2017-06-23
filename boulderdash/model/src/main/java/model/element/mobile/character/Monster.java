@@ -1,3 +1,6 @@
+/*
+ * 
+ */
 package model.element.mobile.character;
 
 import model.element.Direction;
@@ -5,13 +8,19 @@ import model.element.Position;
 import model.element.mobile.Mobile;
 
 /**
- * <h1>The abstract class Monster can kill RockFord and die against Rock and explode, destroying wall and boulder around</h1>
+ * <h1>The abstract class Monster can kill RockFord and die against Rock and explode, destroying wall and boulder around</h1>.
  *
  * @author Ghislain Gloria
  * @version 1.0
  */
 public abstract class Monster extends Mobile {
 	
+	/**
+	 * Instantiates a new monster.
+	 *
+	 * @param position the position
+	 * @param direction the direction
+	 */
 	public Monster(Position position, Direction direction) {
 		super(position, direction);
 	}
@@ -37,7 +46,7 @@ public abstract class Monster extends Mobile {
 	}
 	
 	/**
-	 * Move the monster
+	 * Move the monster.
 	 */
 	public void move(){
 		

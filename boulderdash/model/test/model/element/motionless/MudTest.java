@@ -12,12 +12,16 @@ import model.element.Position;
 import model.element.mobile.character.RockFord;
 
 /**
- * @author gglor
+ * The Class MudTest.
  *
+ * @author gglor
  */
 public class MudTest {
+	
 	/**
 	 * Test method for {@link model.element.motionless.Mud#Mud(Positon)}.
+	 *
+	 * @param levelmap the levelmap
 	 */
 	@Test
 	public void testMud(LevelMap levelmap) {

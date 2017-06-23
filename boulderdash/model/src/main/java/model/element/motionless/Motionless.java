@@ -1,3 +1,6 @@
+/*
+ * 
+ */
 package model.element.motionless;
 
 import model.element.Element;
@@ -12,8 +15,12 @@ import model.element.Position;
  */
 
 public abstract class Motionless extends Element implements IMotionless{
-	/**The Position of the Motionless Element
-	 * @param position */
+	
+	/**
+	 * The Position of the Motionless Element.
+	 *
+	 * @param position the position
+	 */
 	
 	public Motionless(Position position){
 		super(position);

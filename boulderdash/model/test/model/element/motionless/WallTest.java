@@ -8,8 +8,9 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 /**
- * @author gglor
+ * The Class WallTest.
  *
+ * @author gglor
  */
 public class WallTest {
 

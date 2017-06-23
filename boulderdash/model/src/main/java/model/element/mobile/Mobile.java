@@ -1,3 +1,6 @@
+/*
+ * 
+ */
 package model.element.mobile;
 
 import model.element.Direction;
@@ -18,14 +21,30 @@ public abstract class Mobile extends Element implements IMobile {
 
 	
 
+	/**
+	 * Instantiates a new mobile.
+	 *
+	 * @param position the position
+	 * @param direction the direction
+	 */
 	public Mobile(Position position, Direction direction) {
 		super(position, direction);
 	}
 
+	/**
+	 * Gets the direction.
+	 *
+	 * @return the direction
+	 */
 	public Direction getDirection() {
 		return direction;
 	}
 
+	/**
+	 * Sets the direction.
+	 *
+	 * @param direction the new direction
+	 */
 	public void setDirection(Direction direction) {
 		this.direction = direction;
 	}
@@ -37,14 +56,23 @@ public abstract class Mobile extends Element implements IMobile {
 
 	}
 
+	/**
+	 * Move down.
+	 */
 	public void moveDown() {
 
 	}
 
+	/**
+	 * Move left.
+	 */
 	public void moveLeft() {
 
 	}
 
+	/**
+	 * Move right.
+	 */
 	public void moveRight() {
 
 	}

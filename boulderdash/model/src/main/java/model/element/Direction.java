@@ -2,11 +2,19 @@
  * 
  */
 package model.element;
-
 /**
- * @author gglor
+ * The Enum Direction.
  *
+ * @author gglor
  */
 public enum Direction {
-	UP,RIGHT,DOWN,LEFT;
+	
+/** The up. */
+UP,
+/** The right. */
+RIGHT,
+/** The down. */
+DOWN,
+/** The left. */
+LEFT;
 }
