@@ -59,6 +59,20 @@ public interface IModel {
 >>>>>>> refs/remotes/origin/master
 
 <<<<<<< HEAD
+    /**
+     * Gets the example by name.
+     *
+     * @param name
+     *            the name
+     * @return the example by name
+     * @throws SQLException
+     *             the SQL exception
+     */
+    Example getExampleByName(String name) throws SQLException;
+
+    /**
+=======
+<<<<<<< HEAD
 	/**
 	 * Gets the all examples.
 	 *
@@ -70,6 +84,7 @@ public interface IModel {
 
 =======
     /*
+>>>>>>> 9e6ebd3d9805dd1d6947fbf945d2e98432b4a76b
      * Gets the all examples.
      *
      * @return the all examples

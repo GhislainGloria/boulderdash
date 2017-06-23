@@ -5,6 +5,8 @@ package model;
 
 import java.sql.SQLException;
 import java.util.List;
+
+import model.dao.ExampleDAO;
 import model.dao.LevelDAO;
 
 /**
@@ -26,6 +28,7 @@ public class ModelFacade implements IModel {
     /**
      * Gets the level by id.
      *
+     * @see model.IModel#getLevelById(int)
      * @param id the id
      * @return the level by id
      * @throws SQLException the SQL exception
@@ -34,24 +37,14 @@ public class ModelFacade implements IModel {
     @Override
     public Level getLevelById(final int id) throws SQLException {
         return LevelDAO.getLevelById(id);
+
     }
-    
-    /*
-	@Override
-	public Example getExampleById(int id) throws SQLException {
-		return null;
-	}
-	*/
-    /*
-     *
-     * @see model.IModel#getExampleByName(java.lang.String)
-     */
-   /* @Override
+
+    @Override
     public Example getExampleByName(final String name) throws SQLException {
         return ExampleDAO.getExampleByName(name);
     }
-	*/
-    
+
     /*
      *
      * @see model.IModel#getAllExamples()

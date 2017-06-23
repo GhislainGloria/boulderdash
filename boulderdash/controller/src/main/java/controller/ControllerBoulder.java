@@ -1,8 +1,14 @@
 package controller;
 
+<<<<<<< HEAD
+import java.sql.SQLException;
+import java.util.List;
+import model.Example;
+=======
 import javax.swing.JOptionPane;
 import java.sql.SQLException;
 import java.util.List;
+>>>>>>> 9e6ebd3d9805dd1d6947fbf945d2e98432b4a76b
 import model.IModel;
 import view.IView;
 
@@ -12,7 +18,11 @@ import view.IView;
  * @author chloe
  * @version 1.0
  */
+<<<<<<< HEAD
+public class ControllerBoulder implements IController, IOrderPerform {
+=======
 public class ControllerBoulder implements IController, IOrderPerformer {
+>>>>>>> 9e6ebd3d9805dd1d6947fbf945d2e98432b4a76b
 
 	/** The view. */
 	private IView view;
@@ -27,6 +37,8 @@ public class ControllerBoulder implements IController, IOrderPerformer {
 	private UserOrder stackOrder;
 
 	/**
+<<<<<<< HEAD
+=======
 	 * The User enter a number between 1 and 5 to choose the level
 	 * 
 	 * @return nLevel Choose the level
@@ -43,6 +55,7 @@ public class ControllerBoulder implements IController, IOrderPerformer {
 	}
 
 	/**
+>>>>>>> 9e6ebd3d9805dd1d6947fbf945d2e98432b4a76b
 	 * Instantiates a new controller.
 	 *
 	 * @param view
@@ -157,7 +170,13 @@ public class ControllerBoulder implements IController, IOrderPerformer {
 		this.stackOrder = UserOrder.NOP;
 	}
 
+<<<<<<< HEAD
+	@Override
+	public IOrderPerform getOrderPerform() {
+		return this;
+=======
 	public IOrderPerformer getOrderPerformer() {
 		return this.getOrderPerformer();
+>>>>>>> 9e6ebd3d9805dd1d6947fbf945d2e98432b4a76b
 	}
 }

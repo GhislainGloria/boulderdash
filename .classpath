@@ -7,7 +7,8 @@
 	<classpathentry kind="src" path="boulderdash/model/src/main/java"/>
 	<classpathentry kind="src" path="boulderdash/view/src/main/java"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="/home/martin/.m2/repository/junit/junit/4.12/junit-4.12.jar">
+
+	<classpathentry kind="lib" path="/home/martin/Dropbox/Exia/1ere_annee/CER_6_3_Interfaces/showboard.jar">
 		<attributes>
 			<attribute name="javadoc_location" value="jar:file:/C:/Users/gglor/.m2/repository/junit/junit/4.11/junit-4.11-javadoc.jar!/"/>
 			<attribute name="maven.pomderived" value="true"/>
@@ -17,7 +18,5 @@
 			<attribute name="maven.scope" value="test"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="src" path="/controller"/>
-	<classpathentry kind="src" path="/model"/>
 	<classpathentry kind="output" path="boulderdash/contract/target/classes"/>
 </classpath>

@@ -6,11 +6,23 @@ import java.io.File;
 import java.io.IOException;
 
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class MainMenu.
+ * The window showing the main menu, where you can select 
+ *   the level, or have a pop-up "help" with the commands
+ */
 public class MainMenu extends JFrame{
 	
+	/** The menu image. */
 	private MenuImage menuImage;
+	
+	/** The option panel. */
 	private JPanel optionPanel;
 	
+	/**
+	 * Instantiates a new main menu.
+	 */
 	public MainMenu(){
 		
 		this.initializeView();
@@ -18,6 +30,9 @@ public class MainMenu extends JFrame{
 	}
 	
 	
+	/**
+	 * Initialize view.
+	 */
 	private void initializeView() {
         this.setVisible(true);
         this.setResizable(false);
@@ -31,6 +46,9 @@ public class MainMenu extends JFrame{
         this.setTitle("Boulder Dash");
     }
 	
+    /**
+     * Creates the layout.
+     */
     private void createLayout() {
 
         this.menuImage = new MenuImage();
@@ -45,6 +63,13 @@ public class MainMenu extends JFrame{
         
     }
     
+    /**
+     * Creates the button.
+     *
+     * @param id the id
+     * @param name the name
+     * @return the j button
+     */
     private JButton createButton(String id, String name){
     	
 		JButton button = new JButton(name);

@@ -7,7 +7,9 @@ import java.sql.SQLException;
 
 import controller.ControllerBoulder;
 import model.ModelFacade;
-import view.ViewFacade;
+import view.GameFrame;
+import view.IView;
+import view.MainWindow;
 
 /**
  * <h1>The Class Main.</h1>
@@ -17,6 +19,26 @@ import view.ViewFacade;
  */
 public abstract class Main {
 
+<<<<<<< HEAD
+    /**
+     * The main method.
+     *
+     * @param args
+     *            the arguments
+     */
+    public static void main(final String[] args) {
+        final ControllerFacade controller = new ControllerFacade(new GameFrame(), new ModelFacade());
+        final MainWindow mainWindow = new MainWindow();
+        
+        try {
+            controller.start();
+        } catch (final SQLException exception) {
+            exception.printStackTrace();
+        }
+        
+        
+    }
+=======
 	/**
 	 * The main method.
 	 *
@@ -34,5 +56,6 @@ public abstract class Main {
 			exception.printStackTrace();
 		}
 	}
+>>>>>>> 9e6ebd3d9805dd1d6947fbf945d2e98432b4a76b
 
 }

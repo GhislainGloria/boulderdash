@@ -22,5 +22,14 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="/home/martin/Dropbox/Exia/1ere_annee/CER_6_3_Interfaces/showboard.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/jadiet/Mes%20codes/java/showboard/showboard.doc.jar!/doc/public"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/martin/Downloads/jautodoc_1.14.0/plugins/net.sf.jautodoc_1.14.0.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/controller"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/model"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/boulderdashtrue"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

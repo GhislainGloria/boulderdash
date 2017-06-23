@@ -3,6 +3,7 @@ package view;
 import javax.swing.*;
 import java.awt.*;
 
+// TODO: Auto-generated Javadoc
 /**
  * GameView
  *
@@ -12,8 +13,13 @@ import java.awt.*;
 
 public class GameView extends JPanel {
 	
+	/** The x. */
 	private int x;
 	
+	/**
+	 * Instantiates a new game view.
+	 * The game's window where all the fun is going on
+	 */
 	public GameView(){
 		
 		

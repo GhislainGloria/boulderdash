@@ -3,6 +3,11 @@
  */
 package model.element;
 
+<<<<<<< HEAD
+import javax.swing.text.Position;
+
+=======
+>>>>>>> 9e6ebd3d9805dd1d6947fbf945d2e98432b4a76b
 /**
  * The Class Element.
  *

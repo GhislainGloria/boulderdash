@@ -6,7 +6,9 @@ package controller;
 import java.sql.SQLException;
 
 import model.IModel;
+import view.GameFrame;
 import view.IView;
+import view.MainWindow;
 
 /**
  * <h1>The Class ControllerFacade provides a facade of the Controller component.</h1>
@@ -25,14 +27,14 @@ public class ControllerFacade implements IController {
     /**
      * Instantiates a new controller facade.
      *
-     * @param view
+     * @param gameFrame
      *            the view
      * @param model
      *            the model
      */
-    public ControllerFacade(final IView view, final IModel model) {
+    public ControllerFacade(final MainWindow mainWindow, final IModel model) {
         super();
-        this.view = view;
+        this.view = mainWindow;
         this.model = model;
     }
 

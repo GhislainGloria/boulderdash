@@ -118,6 +118,10 @@ public class LevelMap implements ILevelMap{
 	public void setElements(Element[][] elements) {
 		this.elements = elements;
 	}
+	
+	public Element getElement(int x, int y){
+		return this.elements[x][y];
+	}
 
 	/**
 	 * Gets the monsters.

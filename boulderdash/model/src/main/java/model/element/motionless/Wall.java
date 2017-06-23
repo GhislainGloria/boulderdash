@@ -3,7 +3,7 @@
  */
 package model.element.motionless;
 
-import model.element.Position;
+import model.element.*;
 
 /**
  * <h1>The class Wall can't be dig and don't move</h1>.

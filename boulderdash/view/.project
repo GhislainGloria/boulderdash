@@ -3,6 +3,7 @@
 	<name>view</name>
 	<comment></comment>
 	<projects>
+		<project>controller</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

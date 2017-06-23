@@ -2,7 +2,7 @@ package view;
 
 import javax.swing.*;
 
-public class MainWindow extends JFrame{
+public class MainWindow extends JFrame implements IView{
 
 	/**
 	 * 
@@ -30,6 +30,12 @@ public class MainWindow extends JFrame{
 		
 		this.gameFrame = new GameFrame();
 		this.setVisible(false);
+	}
+
+	@Override
+	public void displayMessage(String message) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 	
