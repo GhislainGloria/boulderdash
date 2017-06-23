@@ -5,13 +5,14 @@ import java.util.Observer;
 import javax.swing.JPanel;
 import model.ModelObservable;
 
+@SuppressWarnings("serial")
 public class JPanelObservables extends JPanel implements Observer {
-
-	void init(ModelObservable lSigAObserver) {
-		lSigAObserver.addObserver(this);
-	}
-
-	public void update(Observable observable, Object objectConcerne) {
-		repaint();
-	}
+	
+	
+	ModelObservable oModel = new ModelObservable(0);
+	JPanelObservables watcher = new JPanelObservables();
+	oModel.addObserver(watcher);
+	
+	
+	
 }

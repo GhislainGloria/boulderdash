@@ -14,26 +14,22 @@ import view.ViewFacade;
  */
 public abstract class Main {
 
-    /**
-     * The main method.
-     *
-     * @param args
-     *            the arguments
-     * @throws Exception 
-     */
-    public static void main(final String[] args) throws Exception 
-    {
-        final ControllerBoulder controller = new ControllerBoulder(new ViewFacade(), new ModelFacade());
-        
-        
+	/**
+	 * The main method.
+	 *
+	 * @param args
+	 *            the arguments
+	 * @throws Exception
+	 */
+	public static void main(final String[] args) throws Exception {
+		final ControllerBoulder controller = new ControllerBoulder(new ViewFacade(), new ModelFacade());
 
-        try {
-        	controller.choiceLevel();
-            controller.start();
-        } catch (final SQLException exception) 
-        {
-            exception.printStackTrace();
-        }
-    }
+		try {
+			controller.choiceLevel();
+			controller.start();
+		} catch (final SQLException exception) {
+			exception.printStackTrace();
+		}
+	}
 
 }

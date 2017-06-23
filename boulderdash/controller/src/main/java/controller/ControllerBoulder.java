@@ -3,7 +3,6 @@ package controller;
 import javax.swing.JOptionPane;
 import java.sql.SQLException;
 import java.util.List;
-import model.Example;
 import model.IModel;
 import view.IView;
 
@@ -25,26 +24,22 @@ public class ControllerBoulder implements IController, IOrderPerform {
 	private final int speed = 300;
 
 	/** The stack order. */
-	private userOrder stackOrder;
-	
+	private UserOrder stackOrder;
+
 	/**
+	 * The User enter a number between 1 and 5 to choose the level
 	 * 
-	 * @return nLevel 
-	 * 				Choose the level
+	 * @return nLevel Choose the level
 	 */
-	
-	
-	
-	public int choiceLevel() throws Exception 
-	{
+	public int choiceLevel() throws Exception {
 		int nLevel;
-		do{
+		do {
 			JOptionPane cLevel = new JOptionPane();
-			String numLevel = cLevel.showInputDialog(null, "Choose a level", "BoulderDash", JOptionPane.QUESTION_MESSAGE);
+			String numLevel = cLevel.showInputDialog(null, "Choose a level", "BoulderDash",
+					JOptionPane.QUESTION_MESSAGE);
 			nLevel = Integer.parseInt(numLevel);
 		} while (nLevel > 6 || nLevel < 0);
-		
-		
+
 		return nLevel;
 	}
 
@@ -142,7 +137,7 @@ public class ControllerBoulder implements IController, IOrderPerform {
 	 *
 	 * @return the stack order
 	 */
-	private userOrder getStackOrder() {
+	private UserOrder getStackOrder() {
 		return this.stackOrder;
 	}
 
@@ -152,7 +147,7 @@ public class ControllerBoulder implements IController, IOrderPerform {
 	 * @param stackOrder
 	 *            the new stack order
 	 */
-	private void setStackOrder(final userOrder stackOrder) {
+	private void setStackOrder(final UserOrder stackOrder) {
 		this.stackOrder = stackOrder;
 	}
 
@@ -160,7 +155,7 @@ public class ControllerBoulder implements IController, IOrderPerform {
 	 * Clear stack order.
 	 */
 	private void clearStackOrder() {
-		this.stackOrder = userOrder.NOP;
+		this.stackOrder = UserOrder.NOP;
 	}
 
 	@Override
