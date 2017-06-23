@@ -20,6 +20,8 @@ public interface ILevelMap {
 	ArrayList<Element> empty = null;
 	
 	Element RockFord = null;
+	
+	
 
 }
 

@@ -1,5 +1,8 @@
 package model.element.mobile.character;
 
+import model.element.Direction;
+import model.element.Position;
+
 /**
  * <h1>The class TackyTacky is a type of monster, he transform in diamond</h1>
  *
@@ -9,8 +12,8 @@ package model.element.mobile.character;
 
 public class TackyTacky extends Monster{
 	/**Create a TackyTacky*/
-	public TackyTacky(){
-		
+	public TackyTacky(Position position, Direction direction){
+		super(position, direction);
 	}
 	
 	/**Transform the monster in diamond if he die*/

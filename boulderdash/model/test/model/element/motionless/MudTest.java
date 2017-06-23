@@ -7,7 +7,8 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import model.element.Level;
+import model.element.LevelMap;
+import model.element.Position;
 import model.element.mobile.character.RockFord;
 
 /**
@@ -16,16 +17,16 @@ import model.element.mobile.character.RockFord;
  */
 public class MudTest {
 	/**
-	 * Test method for {@link model.element.motionless.Mud#Mud(int, int)}.
+	 * Test method for {@link model.element.motionless.Mud#Mud(Positon)}.
 	 */
 	@Test
-	public void testMud() {
+	public void testMud(LevelMap levelmap) {
 		int a = 5;
 		int b = 5;
-		Mud mud = new Mud(a, b);
-		System.out.println(mud.position.getX());
-		System.out.println(mud.position.getY());
-		if ((mud.position.getX() < 0 || mud.position.getX() > Level.getDimensionX())||(mud.position.getY() < 0 || mud.position.getY()  > Level.getDimensionY())){
+		Mud mud = new Mud(new Position(a,b));
+		System.out.println(mud.getPosition().getX());
+		System.out.println(mud.getPosition().getY());
+		if ((mud.getPosition().getX() < 0 || mud.getPosition().getX() > levelmap.getDimension().getWidth())||(mud.getPosition().getY() < 0 || mud.getPosition().getY()  > levelmap.getDimension().getHeight())){
 			fail("Out of Range");
 		}
 	}
@@ -35,8 +36,8 @@ public class MudTest {
 	 */
 	@Test
 	public void testBeDig() {
-		Mud mudTest = new Mud(5 ,5);
-		RockFord rockfordTest = new RockFord();
+		Mud mudTest = new Mud(new Position(5,5));
+		RockFord rockfordTest = new RockFord(new Position(5,5), null);
 		while(mudTest != null){
 			
 		}

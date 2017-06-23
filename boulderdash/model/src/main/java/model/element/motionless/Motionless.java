@@ -16,6 +16,6 @@ public abstract class Motionless extends Element implements IMotionless{
 	 * @param position */
 	
 	public Motionless(Position position){
-		super();
+		super(position);
 	}
 }

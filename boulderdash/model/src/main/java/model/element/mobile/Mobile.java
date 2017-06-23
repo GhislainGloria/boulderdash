@@ -18,6 +18,10 @@ public abstract class Mobile extends Element implements IMobile {
 
 	
 
+	public Mobile(Position position, Direction direction) {
+		super(position, direction);
+	}
+
 	public Direction getDirection() {
 		return direction;
 	}

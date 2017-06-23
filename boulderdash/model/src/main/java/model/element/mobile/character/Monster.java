@@ -1,5 +1,7 @@
 package model.element.mobile.character;
 
+import model.element.Direction;
+import model.element.Position;
 import model.element.mobile.Mobile;
 
 /**
@@ -10,6 +12,10 @@ import model.element.mobile.Mobile;
  */
 public abstract class Monster extends Mobile {
 	
+	public Monster(Position position, Direction direction) {
+		super(position, direction);
+	}
+
 	/**
      * Destroy the monster when the Boulder is in the same Position.
      */

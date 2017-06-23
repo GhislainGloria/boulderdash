@@ -1,5 +1,8 @@
 package model.element.mobile.character;
 
+import model.element.Direction;
+import model.element.Position;
+
 /**
  * <h1>The class BubbleBubble is a type of monster, he give pts and transform in diamond</h1>
  *
@@ -9,8 +12,8 @@ package model.element.mobile.character;
 
 public class PingPing extends Monster{
 	/**Create a PingPing*/
-	public PingPing(){
-		
+	public PingPing(Position position, Direction direction){
+		super(position, direction);
 	}
 	
 	/**Move the monster from up to down*/

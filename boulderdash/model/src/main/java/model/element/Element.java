@@ -11,7 +11,18 @@ public class Element {
 	 */
 	private Position position;
 	private Dimension dimension;
+	private String image;
 	
+	public Element(Position position, Direction direction) {
+		position = this.position;
+		image = "";
+	}
+
+	public Element(Position position) {
+		position = this.position;
+		dimension = new Dimension(49,49);
+	}
+
 	public Position getPosition() {
 		return position;
 	}
@@ -30,6 +41,8 @@ public class Element {
 	
 	/**Place the Element in the Level */
 	public void placeILevelp() {
-
+	
 	}
+
+	
 }

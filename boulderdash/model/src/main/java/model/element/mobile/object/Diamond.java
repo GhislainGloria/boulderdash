@@ -1,5 +1,7 @@
 package model.element.mobile.object;
 
+import model.element.Direction;
+import model.element.Position;
 import model.element.mobile.character.RockFord;
 
 /**
@@ -11,10 +13,11 @@ import model.element.mobile.character.RockFord;
 
 public class Diamond extends Object{
 	/**Create an instance of a Diamond*/
-	public Diamond(){
-		super();
-	}
 	
+	public Diamond(Position position, Direction direction) {
+		super(position, direction);
+	}
+
 	/**Make the Diamond disappeared when RockFord is in the same Position*/
 	public void beTake(RockFord rockford){
 		if (rockford.getPosition() == this.getPosition()){

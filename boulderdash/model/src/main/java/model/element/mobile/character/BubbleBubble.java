@@ -1,5 +1,8 @@
 package model.element.mobile.character;
 
+import model.element.Direction;
+import model.element.Position;
+
 /**
  * <h1>The class BubbleBubble is a type of monster, he give pts and transform in diamond</h1>
  *
@@ -9,7 +12,8 @@ package model.element.mobile.character;
 
 public class BubbleBubble extends Monster{
 	/**Create a BubbleBubble*/
-	public BubbleBubble(){
+	public BubbleBubble(Position position, Direction direction){
+		super(position, direction);
 	}
 	/**Move the monster from right to left*/
 	public void move(){

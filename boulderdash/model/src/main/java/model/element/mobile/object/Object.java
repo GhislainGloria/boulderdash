@@ -1,5 +1,6 @@
 package model.element.mobile.object;
 
+import model.element.Direction;
 import model.element.Position;
 import model.element.mobile.Mobile;
 
@@ -11,6 +12,11 @@ import model.element.mobile.Mobile;
  */
 
 public abstract class Object extends Mobile {
+	
+	public Object(Position position, Direction direction) {
+		super(position, direction);
+	}
+
 	/**Make the object fall if he don't have motionless element under him */
 	public void Fall(Position position){
 	}
