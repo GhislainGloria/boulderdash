@@ -1,0 +1,10 @@
+controller
+model
+view
+model.dao
+model.element
+model.element.mobile.character
+model.element.mobile
+model.element.mobile.object
+model.element.motionless
+main

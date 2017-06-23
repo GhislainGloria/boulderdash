@@ -1,0 +1,24 @@
+-classpath
+'D:/projetjava/boulderdash/boulderdash/contract/target/classes;D:/projetjava/boulderdash/boulderdash/controller/target/classes;D:/projetjava/boulderdash/boulderdash/model/target/classes;D:/projetjava/boulderdash/boulderdash/view/target/classes;D:/projetjava/boulderdash/boulderdash/main/target/classes;C:/Users/gglor/.m2/repository/mysql/mysql-connector-java/6.0.6/mysql-connector-java-6.0.6.jar'
+-encoding
+'Cp1252'
+-protected
+-sourcepath
+'D:/projetjava/boulderdash/boulderdash/contract/src/main/java;D:/projetjava/boulderdash/boulderdash/contract/target/generated-sources/annotations;D:/projetjava/boulderdash/boulderdash/controller/src/main/java;D:/projetjava/boulderdash/boulderdash/controller/target/generated-sources/annotations;D:/projetjava/boulderdash/boulderdash/model/src/main/java;D:/projetjava/boulderdash/boulderdash/model/target/generated-sources/annotations;D:/projetjava/boulderdash/boulderdash/view/src/main/java;D:/projetjava/boulderdash/boulderdash/view/target/generated-sources/annotations;D:/projetjava/boulderdash/boulderdash/main/src/main/java;D:/projetjava/boulderdash/boulderdash/main/target/generated-sources/annotations'
+-author
+-bottom
+'Copyright &#169; 2017. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'D:/projetjava/boulderdash/boulderdash/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'boulderdash 0.0.1-SNAPSHOT API'
+-linkoffline
+'http://docs.oracle.com/javase/8/docs/api' 'D:/projetjava/boulderdash/boulderdash/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'boulderdash 0.0.1-SNAPSHOT API'

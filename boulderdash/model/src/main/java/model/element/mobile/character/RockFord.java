@@ -33,4 +33,11 @@ public class RockFord extends Mobile{
 		
 	}
 	
+	/**
+	 * Die.
+	 */
+	public void die(){
+		
+	}
+	
 }

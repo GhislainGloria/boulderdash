@@ -4,6 +4,7 @@
 package model.element.motionless;
 
 import model.element.Position;
+import model.element.mobile.character.RockFord;
 
 /**
  * <h1>The class Mud can be dig and don't move</h1>.
@@ -27,7 +28,7 @@ public class Mud extends Motionless{
      * Destroy the Mud when RockFord is in the same position.
      */
 	/**
-     * @see model.element.mobile.character.RockFord#digMud(Mud)
+     * @see model.element.mobile.character.RockFord#dig()
      */
 	public void beDig(){
 		

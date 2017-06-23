@@ -4,10 +4,7 @@
 package controller;
 
 import java.sql.SQLException;
-import java.util.List;
 
-import model.Level;
-import model.element.LevelMap;
 import model.IModel;
 import view.IView;
 
@@ -46,8 +43,8 @@ public class ControllerFacade implements IController {
      *             the SQL exception
      */
     public void start() throws SQLException {
-    	//System.out.println(this.getModel().getLevelById(1).toString());
-    	LevelMap levelmap = new LevelMap();
+    	System.out.println(this.getModel().getLevelById(1).toString());
+    	//LevelMap levelmap = new LevelMap();
     	
         //this.getView().displayMessage(this.getModel().getLevelById(1).toString());
 
