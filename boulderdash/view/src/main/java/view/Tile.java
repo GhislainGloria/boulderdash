@@ -11,8 +11,6 @@ import fr.exia.showboard.ISquare;
 /**
  * <h1>The Class Square.</h1>
  *
- * @author Martin HUBERT
- * @version 1.0
  */
 
 public class Tile implements ISquare {

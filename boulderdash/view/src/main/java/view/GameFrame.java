@@ -21,33 +21,51 @@ import model.IMap;
 import model.element.mobile.IMobile;
 
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class GameFrame.
+ */
 public class GameFrame implements KeyListener{
 	
+    /** The width. */
     private int width = 10;
+
+    /** The height. */
     private int height = 10;
 	
 	/** The initial frame size. */
     private static final int  defaultFrameSize = 700;
     
+    /** The view. */
     private Rectangle view = new Rectangle(0, 0, width, height);
+    
+    
+    /** The Constant squareSize. */
     private static final int squareSize = 50;
     
 //    private IOrderPerform  orderPerform;
     
-    /** The map */
+    /**  The map. */
     private IMap map;
     
-    /** The character */
+    /**  The character. */
     private IMobile character;
     
-    /** The array of monsters*/
+    /**  The array of monsters. */
     private ArrayList<IMobile> monsters;
     
-    /** The BoardFrame */
+    /**  The BoardFrame. */
     final BoardFrame boardFrame;
     
+    
 
- 
+    /**
+     *  Constructor.
+     *
+     * @param map the map
+     * @param character the character
+     * @param monsters the monsters
+     */
     public GameFrame(final IMap map, final IMobile character, final ArrayList<IMobile> monsters){
     	this.setMap(map);
     	this.setCharacter(character);
@@ -55,6 +73,9 @@ public class GameFrame implements KeyListener{
     	this.initBoardFrame();
     }
     
+    /**
+     *  Initiates the board frame with parameters, adds a key listener.
+     */
     private void initBoardFrame(){
     	
     	boardFrame = new BoardFrame("View");
@@ -78,6 +99,13 @@ public class GameFrame implements KeyListener{
     	
     }
     
+    /**
+     *  Paint the map according to the map design
+     * 	  monsters and character are generated.
+     *
+     * @param map the map
+     * @return void
+     */
     public void paintMap(LevelMap map){
     	   
     	for(int i=0; i < map.getHeight(); i++) {
@@ -93,26 +121,26 @@ public class GameFrame implements KeyListener{
 			   
 	        switch (c){
 	        
-	        	case 'W':	tile = this.boulderTile;
+	        	case 'R':	tile = this.boulderTile;
 	        		break;
-	        	case 'M':	tile = this.diamondtile;
+	        	case 'O':	tile = this.diamondtile;
 	        		break;
-	        	case 'R':	tile = this.emptyTile;
+	        	case 'B':	tile = this.emptyTile;
 	        		break;
 	        	case 'M':	tile = this.mudTile;
 	        		break;
-	        	case 'f':	tile = this.wallTile;		
+	        	case 'W':	tile = this.wallTile;		
 	        		break;
-	        	case 'f':	tile = this.emptyTile	
+	        	case 'B':	tile = this.emptyTile	
 	        				monster = this.bubble;		
         		break;
-	        	case 'f':	tile = this.emptyTile
+	        	case 'P':	tile = this.emptyTile
         					monster = this.pingPing;		
 	        	break;
-	        	case 'f':	tile = this.emptyTile
+	        	case 'U':	tile = this.emptyTile
 	    					monster = this.puffPuff;		
 	        	break;
-	        	case 'f':	tile = this.emptyTile
+	        	case 'T':	tile = this.emptyTile
 	    					monster = this.tackyTacky;		
 	        	break;
         		default:	tile = this.emptyTile;	
@@ -154,6 +182,10 @@ public class GameFrame implements KeyListener{
         return userOrder;
     }
     
+    /**
+     *  Load the tiles, so that each tile of the frame is just 
+     *   a copy of these ones, memory saved!.
+     */
     protected void loadTiles(){
     	
     	Tile boulderTile = new Tile("boulder");
@@ -167,48 +199,82 @@ public class GameFrame implements KeyListener{
 
     }
     
+	/* (non-Javadoc)
+	 * @see java.awt.event.KeyListener#keyPressed(java.awt.event.KeyEvent)
+	 */
 	@Override
 	public void keyPressed(KeyEvent e) {
 		// TODO Auto-generated method stub
 		
 	}
 
+	/* (non-Javadoc)
+	 * @see java.awt.event.KeyListener#keyReleased(java.awt.event.KeyEvent)
+	 */
 	@Override
 	public void keyReleased(KeyEvent e) {
 		// TODO Auto-generated method stub
 		
 	}
 
+	/* (non-Javadoc)
+	 * @see java.awt.event.KeyListener#keyTyped(java.awt.event.KeyEvent)
+	 */
 	@Override
 	public void keyTyped(KeyEvent e) {
 		// TODO Auto-generated method stub
 		
 	}
 	
+	/**
+	 *  Get the map.
+	 *
+	 * @return map
+	 */
 	protected IMap getMap() {
 		return this.map;
 	}
 	
+	/**
+	 *  Sets the character .
+	 *
+	 * @param character the new character
+	 */
 	protected void setCharacter(final IMobile character) {
 		this.character = character;
 	}
 	
+	/**
+	 *  Sets the view .
+	 *
+	 * @param view the new view
+	 */
 	protected void setView(final Rectangle view) {
 		this.view = view;
 	}
 	
+	/**
+	 *  Sets the Order Performer .
+	 *
+	 * @param newPerformer the new order performer
+	 */
 	public void setOrderPerformer(final IOrderPerformer newPerformer) {
 		this.orderPerformer = newPerformer;
 	}
 
+	/**
+	 * Gets the character.
+	 *
+	 * @return the character
+	 */
 	protected IMobile getCharacter() {
 		return this.character;
 	}
 	
 	/**
-	 * 
-	 * @param newPawns
-	 *            The pawn list.
+	 * Sets the monsters.
+	 *
+	 * @param monsters the new monsters
 	 */
 	protected void setMonsters(final ArrayList<IMobile> monsters) {
 		this.monsters = monsters;

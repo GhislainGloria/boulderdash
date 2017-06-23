@@ -27,5 +27,6 @@
 			<attribute name="javadoc_location" value="jar:file:/C:/Users/jadiet/Mes%20codes/java/showboard/showboard.doc.jar!/doc/public"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="/home/martin/Downloads/jautodoc_1.14.0/plugins/net.sf.jautodoc_1.14.0.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
