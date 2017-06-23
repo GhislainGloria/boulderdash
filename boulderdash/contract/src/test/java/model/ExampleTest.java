@@ -9,7 +9,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class ExampleTest {
-    private Example example;
+    private Level level;
 
     @BeforeClass
     public static void setUpBeforeClass() throws Exception {
@@ -21,7 +21,7 @@ public class ExampleTest {
 
     @Before
     public void setUp() throws Exception {
-        this.example = new Example(1, "Example test");
+        this.level = new Level(1, "Level test");
     }
 
     @After
@@ -31,28 +31,28 @@ public class ExampleTest {
     @Test
     public void testGetId() {
         final int expected = 1;
-        assertEquals(expected, this.example.getId());
+        assertEquals(expected, this.level.getId());
     }
 
     @Test
     public void testGetName() {
-        final String expected = "Example test";
-        assertEquals(expected, this.example.getName());
+        final String expected = "Level test";
+        assertEquals(expected, this.level.getName());
     }
 
     @Test
     public void testSetName() {
-        String expected = "Example test";
-        assertEquals(expected, this.example.getName());
-        expected = "Example test modified";
-        this.example.setName(expected);
-        assertEquals(expected, this.example.getName());
+        String expected = "Level test";
+        assertEquals(expected, this.level.getName());
+        expected = "Level test modified";
+        this.level.setName(expected);
+        assertEquals(expected, this.level.getName());
     }
 
     @Test
     public void testToString() {
-        final String expected = "1 : Example test";
-        assertEquals(expected, this.example.toString());
+        final String expected = "1 : Level test";
+        assertEquals(expected, this.level.toString());
     }
 
 }

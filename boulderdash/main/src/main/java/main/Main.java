@@ -4,6 +4,8 @@ import java.sql.SQLException;
 
 import controller.ControllerFacade;
 import model.ModelFacade;
+import view.GameFrame;
+import view.IView;
 import view.MainWindow;
 
 /**
@@ -21,7 +23,7 @@ public abstract class Main {
      *            the arguments
      */
     public static void main(final String[] args) {
-        final ControllerFacade controller = new ControllerFacade(new ViewFacade(), new ModelFacade());
+        final ControllerFacade controller = new ControllerFacade(new GameFrame(), new ModelFacade());
         final MainWindow mainWindow = new MainWindow();
         
         try {

@@ -13,8 +13,8 @@ import model.element.mobile.Mobile;
 
 public class RockFord extends Mobile{
 	/**Create an instance of Rockford*/
-	public RockFord(Direction direction, Position position, String image){
-		
+	public RockFord(Position position, Direction direction){
+		super(position, direction);
 	}
 	
 	public void dig(){

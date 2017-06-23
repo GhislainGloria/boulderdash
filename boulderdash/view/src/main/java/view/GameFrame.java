@@ -1,24 +1,21 @@
 package view;
 
 import java.awt.Dimension;
-
-import java.awt.Paint;
 import java.awt.Rectangle;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.io.*;
 import java.util.ArrayList;
 
-import javax.swing.*;
-
-import fr.exia.showboard.BoardFrame;
-import fr.exia.showboard.IPawn;
-//import controller
 import controller.IOrderPerform;
 import controller.UserOrder;
-
-import model.IMap;
+import fr.exia.showboard.BoardFrame;
+import fr.exia.showboard.IPawn;
+import fr.exia.showboard.ISquare;
+import model.element.Element;
+import model.element.ILevelMap;
+import model.element.LevelMap;
 import model.element.mobile.IMobile;
+import model.element.mobile.Mobile;
 
 
 // TODO: Auto-generated Javadoc
@@ -43,59 +40,68 @@ public class GameFrame implements KeyListener{
     /** The Constant squareSize. */
     private static final int squareSize = 50;
     
-//    private IOrderPerform  orderPerform;
+    private IOrderPerform  orderPerform;
     
     /**  The map. */
-    private IMap map;
+    private LevelMap map;
     
     /**  The character. */
     private IMobile character;
     
     /**  The array of monsters. */
-    private ArrayList<IMobile> monsters;
+    private ArrayList<Element> elements;
     
     /**  The BoardFrame. */
-    final BoardFrame boardFrame;
+	final BoardFrame boardFrame = new BoardFrame("View");
+	
+    /**
+     *  Load the tiles, so that each tile of the frame is just 
+     *   a copy of these ones, memory saved!.
+     */
+	Tile boulderTile = new Tile("boulder");
+	Tile diamondTile = new Tile("diamond");
+	Tile emptyTile = new Tile("empty");
+	Tile mudTile = new Tile("Mud");
+	Tile wallTile = new Tile("wall");
     
     
 
     /**
      *  Constructor.
-     *
-     * @param map the map
-     * @param character the character
-     * @param monsters the monsters
      */
-    public GameFrame(final IMap map, final IMobile character, final ArrayList<IMobile> monsters){
-    	this.setMap(map);
-    	this.setCharacter(character);
-    	this.setMonsters(monsters);
+    public GameFrame(){
     	this.initBoardFrame();
+    	this.paintMap(map);
     }
     
-    /**
+   
+
+
+
+
+	/**
      *  Initiates the board frame with parameters, adds a key listener.
      */
-    private void initBoardFrame(){
+    private void initBoardFrame() throws NullPointerException{
     	
-    	boardFrame = new BoardFrame("View");
         boardFrame.setDimension(new Dimension());
         boardFrame.setDisplayFrame(this.view);
         boardFrame.setSize(this.view.width * squareSize, this.view.height * squareSize);
         boardFrame.addKeyListener(this);
         
-        
-        
-        for (int x = 0; x < this.getMap().getWidth(); x++) {
-			for (int y = 0; y < this.getMap().getHeight(); y++) {
-				boardFrame.addSquare(this.map.getOnTheMapXY(x, y), x, y);
-			}
+//        boardFrame.addPawn((IPawn) map.getRockFord());
+		
+        for (Element monster : map.getMonsters()) {
+			boardFrame.addPawn((IPawn) monster);
 		}
-        
-        boardFrame.addPawn(this.getCharacter());
-		for (IMobile monster : this.monsters) {
-			boardFrame.addPawn(monster);
+		
+		for (Element objet : map.getObjects()) {
+			boardFrame.addPawn((IPawn) objet);
 		}
+		
+//		this.getMap().getObservable().addObserver(boardFrame.getObserver());
+
+		
     	
     }
     
@@ -108,65 +114,28 @@ public class GameFrame implements KeyListener{
      */
     public void paintMap(LevelMap map){
     	   
-    	for(int i=0; i < map.getHeight(); i++) {
+    	for(int i=0; i < map.getDimension().getHeight(); i++) {
 	       
-		   for(int k=0; k < map.getWidth(); k++){
+		   for(int k=0; k < map.getDimension().getWidth(); k++){
 	        
-			   char c = map.getCharacter(i, k);
-			   
-			   Tile tile;
-			   IMobile monster = null;
-	        
-//TO-DO changer les caracteres + monstre creuse mud? + adapter nom monstres
-			   
-	        switch (c){
-	        
-	        	case 'R':	tile = this.boulderTile;
-	        		break;
-	        	case 'O':	tile = this.diamondtile;
-	        		break;
-	        	case 'B':	tile = this.emptyTile;
-	        		break;
-	        	case 'M':	tile = this.mudTile;
-	        		break;
-	        	case 'W':	tile = this.wallTile;		
-	        		break;
-	        	case 'B':	tile = this.emptyTile	
-	        				monster = this.bubble;		
-        		break;
-	        	case 'P':	tile = this.emptyTile
-        					monster = this.pingPing;		
-	        	break;
-	        	case 'U':	tile = this.emptyTile
-	    					monster = this.puffPuff;		
-	        	break;
-	        	case 'T':	tile = this.emptyTile
-	    					monster = this.tackyTacky;		
-	        	break;
-        		default:	tile = this.emptyTile;	
-	        	
-	        }
-	        
-	        boardFrame.addSquare(tile, i, k);
-	        
-	        if(monster != null){
-	        	this.monsters.add(monster);
-	        }
-	        
-	       }
-	   
+			 boardFrame.addSquare((ISquare) map.getElement(i, k), i, k);
+			 
+		   } 
 
 	  }
+    	
+    	boardFrame.setVisible(true);
     }
 
     /**
      * Key code to user order.
+     * @param <UserOrder>
      *
      * @param keyCode
      *            the key code
      * @return the user order
      */
-    private static UserOrder keyCodeToUserOrder(final int keyCode) {
+    protected UserOrder keyCodeToUserOrder(final int keyCode) {
         UserOrder userOrder;
         switch (keyCode) {
             case KeyEvent.VK_RIGHT:
@@ -180,23 +149,6 @@ public class GameFrame implements KeyListener{
                 break;
         }
         return userOrder;
-    }
-    
-    /**
-     *  Load the tiles, so that each tile of the frame is just 
-     *   a copy of these ones, memory saved!.
-     */
-    protected void loadTiles(){
-    	
-    	Tile boulderTile = new Tile("boulder");
-    	Tile diamondTile = new Tile("diamond");
-    	Tile emptyTile = new Tile("empty");
-    	Tile mudTile = new Tile("Mud");
-    	Tile wallTile = new Tile("wall");
-    	
-    	IMobile bubble = new IMobile()
-    	
-
     }
     
 	/* (non-Javadoc)
@@ -231,7 +183,7 @@ public class GameFrame implements KeyListener{
 	 *
 	 * @return map
 	 */
-	protected IMap getMap() {
+	protected ILevelMap getMap() {
 		return this.map;
 	}
 	
@@ -253,13 +205,18 @@ public class GameFrame implements KeyListener{
 		this.view = view;
 	}
 	
+	 private void setMap(LevelMap map) {
+			this.map = map;
+			
+		}
+	
 	/**
 	 *  Sets the Order Performer .
 	 *
 	 * @param newPerformer the new order performer
 	 */
-	public void setOrderPerformer(final IOrderPerformer newPerformer) {
-		this.orderPerformer = newPerformer;
+	public void setOrderPerformer(final IOrderPerform performer) {
+		this.orderPerform = performer;
 	}
 
 	/**
@@ -271,13 +228,6 @@ public class GameFrame implements KeyListener{
 		return this.character;
 	}
 	
-	/**
-	 * Sets the monsters.
-	 *
-	 * @param monsters the new monsters
-	 */
-	protected void setMonsters(final ArrayList<IMobile> monsters) {
-		this.monsters = monsters;
-	}
+
 	
 }
