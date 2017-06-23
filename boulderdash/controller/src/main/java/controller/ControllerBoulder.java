@@ -121,7 +121,7 @@ public class ControllerBoulder implements IController, IOrderPerformer {
 	 * @param view
 	 *            the view to set
 	 */
-	private void setView(final IView view) {
+	public void setView(final IView view) {
 		this.view = view;
 	}
 
@@ -140,7 +140,7 @@ public class ControllerBoulder implements IController, IOrderPerformer {
 	 * @param model
 	 *            the model to set
 	 */
-	private void setModel(final IModel model) {
+	public void setModel(final IModel model) {
 		this.model = model;
 	}
 
@@ -159,7 +159,7 @@ public class ControllerBoulder implements IController, IOrderPerformer {
 	 * @param stackOrder
 	 *            the new stack order
 	 */
-	private void setStackOrder(final UserOrder stackOrder) {
+	public void setStackOrder(final UserOrder stackOrder) {
 		this.stackOrder = stackOrder;
 	}
 
