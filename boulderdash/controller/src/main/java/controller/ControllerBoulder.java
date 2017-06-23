@@ -146,7 +146,7 @@ public class ControllerBoulder implements IController, IOrderPerformer {
 	 * @param stackOrder
 	 *            the new stack order
 	 */
-	private void setStackOrder(final UserOrder stackOrder) {
+	public void setStackOrder(final UserOrder stackOrder) {
 		this.stackOrder = stackOrder;
 	}
 
