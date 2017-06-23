@@ -7,7 +7,7 @@ package controller;
  * @author Corentin RAGUENEAU
  *
  */
-public enum userOrder 
+public enum UserOrder 
 {
 	UP, DOWN, LEFT, RIGHT, Z, D;
 }
